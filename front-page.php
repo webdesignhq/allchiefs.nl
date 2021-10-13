@@ -4,24 +4,41 @@
 get_header();
 ?>
 <?php is_front_page(); ?>
+<video autoplay muted loop id="videobg">
+  <source src="https://allchiefs.nl/wp-content/uploads/2018/11/AllChiefs-Website-Video-Be%CC%81ta.mp4" type="video/mp4">
+</video>
 <div id="banner">
-	<div class="row align-items-end">
-		<div class="col-md-4">
-		<div class="banner-1 text-center p-4">
-			<h1>Woonkamer</h1>
-			<p>Alles wat hier staat is slechts om een indruk te geven 
-van het grafische effect van tekst op deze plek. </p>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="bannercontent text-left p-4">
+					<h1>Consultancy <br> with a heartbeat</h1>
+					<span>Alles wat hier staat is slechts om een indruk te geven van het grafische effect van tekst op deze plek. </span>
+				</div>
+			</div>
 		</div>
-</div>
-		<div class="banner-2 col-md-4 text-center p-4">
-			<h1>Woonkamer</h1>
-			<p>Alles wat hier staat is slechts om een indruk te geven 
-van het grafische effect van tekst op deze plek. </p>
-		</div>
-		<div class="banner-3 col-md-4 text-center p-4">
-			<h1>Woonkamer</h1>
-			<p>Alles wat hier staat is slechts om een indruk te geven 
-van het grafische effect van tekst op deze plek. </p>
+	</div>
+	<div class="bannerblocks pt-5 pb-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<span>People</span>
+					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
+					<a href="#" class="readmore">- lees meer</a>
+				</div>
+				<div class="col-md-3">
+					<span>Performance</span>
+					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
+				</div>
+				<div class="col-md-3">
+					<span>Eco-system</span>
+					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
+				</div>
+				<div class="col-md-3">
+					<span>Customer</span>
+					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
