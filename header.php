@@ -36,7 +36,7 @@
 								 the_custom_logo();
 								}
 							?>
-					</div>
+					</div> 
 				</div>
 				<div class="col-md-10 text-right"  id="menu">
 					<button class="menu-toggle btn"><i class="fas fa-bars"></i></button>

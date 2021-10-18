@@ -28,13 +28,13 @@ h2 {
 h3 {
   	font-family: 'Poppins', sans-serif;
 	font-size: 30px;
-	color: #00a99d;
+	color: #333;
 	font-weight: 700;
 }
 
 p {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 40px;
     color: #333333;
 	line-height: 1.73;
   	font-family: 'Poppins', sans-serif;
@@ -53,17 +53,16 @@ span {
 li {
 	font-size: 16px;
   	font-family: 'Poppins', sans-serif;
-	  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.88;
+	font-size: 16px;
+    font-weight: 300;
+    line-height: 1.88;
 }
 
 a:hover {
 	color: #000;
 }
 
-
-
+/* Header Section */
 .custom_logo {
 	z-index: 10;
 	position: relative;
@@ -73,18 +72,19 @@ header {
 	z-index: 10;
 }
 
-#videobg {
-  position: absolute;
-  right: 0;
-  top: 0;
-   width: 100vw;
-	height: 90vh;
-  object-fit: cover;
-  	z-index: 0;
-}
 
+/* Banner Section */
 #banner {
 	height: 90vh;
+	width: 100%;
+	background: url('http://localhost/allchiefs.nl/wp-content/uploads/2021/10/test.jpg');
+	background-size: cover;
+	margin-top: -100px;
+	position: relative;
+}
+
+#banner .bannercontent {
+	margin-top: 250px;
 }
 
 #banner  h1 {
@@ -97,7 +97,9 @@ header {
 }
 
 #banner .bannerblocks {
-	position: relative;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 	background-color: rgba(0,0,0,0.5);
 }
 
@@ -113,12 +115,29 @@ header {
 	font-weight: 300;
 }
 
+/* About Section */
 
-/* Footer */
-#footer {
-	background-color: #EAE3D2;
+#about .aboutimg img {
+	width: 100%;
 }
 
+
+/* Excellences Section */
+#excellences {
+	background-color: rgba(234,227,210,0.25);
+}
+
+
+/* Who we are Section */
+#whoweare .whoweareimg img {
+	width: 100%;
+}
+
+
+/* Footer Section */
+#footer {
+	background-color: rgba(234,227,210,0.4);
+}
 
 
 /* Menu*/
