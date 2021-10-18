@@ -4,11 +4,12 @@
 get_header();
 ?>
 <div id="whatwedo" class="pt-5 pb-5 mb-5">
-	<div class="container">
+	<div class="container-xxl">
 		<div class="row align-items-center">
 			<div class="col-md-6">
 				<h2>Ontdek jouw<br>nieuwe perspectief</h2>
-				<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
+				<p class="pt-4 pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
+				<button type="button" class="btn btn-primary">People</button> <button type="button" class="btn btn-primary">Sustainability</button> <button type="button" class="btn btn-primary">Fit for Future</button> <button type="button" class="btn btn-primary">Data</button>
 			</div>
 			<div class="col-md-6 whatwedoimg">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg"/>
@@ -18,14 +19,14 @@ get_header();
 </div>
 
 <div id="people" class="pt-5 pb-5 mt-5">
-	<div class="container">
+	<div class="container-xxl">
 		<div class="row">
 			<div class="col-md-6">
 				<h2>People</h2>
 			</div>
 			<div class="col-md-6">
 				<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
-				<button type="button" class="btn btn-primary">Meer over people</button>
+				<button type="button" class="btn btn-primary people-bg">Meer over people</button>
 			</div>
 			<div class="col-md-12"> 
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -41,7 +42,7 @@ get_header();
 			</ul>
 			<div class="tab-content pt-5 pb-5 ps-2" id="myTabContent">
 			  <div class="tab-pane fade show active" id="solutions" role="tabpanel" aria-labelledby="solutions-tab">
-			  <?php  
+					<?php  
 							$args = array(
 								'post_type'      => 'solution',
 								'posts_per_page' => 4,

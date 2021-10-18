@@ -5,7 +5,7 @@ get_header();
 ?>
 <?php is_front_page(); ?>
 <div id="banner">
-	<div class="container">
+	<div class="container-xxl">
 		<div class="row">
 			<div class="col-md-8">
 				<div class="bannercontent text-left p-4">
@@ -16,39 +16,39 @@ get_header();
 		</div>
 	</div>
 	<div class="bannerblocks">
-		<div class="container">
+		<div class="container-xxl">
 			<div class="row">
 				<div class="col-md-3">
 					<span>People</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
-					<a href="#" class="readmore">Lees meer</a>
+					<a href="#" class="read-more">Lees meer</a>
 				</div>
 				<div class="col-md-3">
 					<span>Sustainability</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
-					<a href="#" class="readmore">Lees meer</a>
+					<a href="#" class="read-more">Lees meer</a>
 				</div>
 				<div class="col-md-3">
 					<span>Fit for Future</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
-					<a href="#" class="readmore">Lees meer</a>
+					<a href="#" class="read-more">Lees meer</a>
 				</div>
 				<div class="col-md-3">
 					<span>Data</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
-					<a href="#" class="readmore">Lees meer</a>
+					<a href="#" class="read-more">Lees meer</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <div id="about" class="pt-5 pb-5 mb-5">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-md-6 aboutimg">
+	<div class="container-xxl">
+		<div class="row align-items-center justify-content-between">
+			<div class="col-lg-6 col-lg-offset-1 aboutimg">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg"/>
 			</div>
-			<div class="col-md-6">
+			<div class="col-lg-5">
 				<h2>Sta vandaag klaar voor de dag van morgen</h2>
 				<p>Wij zetten jou aan het stuur van je eigen verandering. Door verbinding maken we impact. Onze Chiefs excelleren op people, customers, performance en ecosystems en vooral waar deze samen komen. Wij zijn scherp en blikverruimend. Voor ons telt alleen het optimale resultaat.</p>
 			</div>
@@ -57,7 +57,7 @@ get_header();
 </div>
 
 <div id="excellences" class="pt-5 pb-5">
-	<div class="container">
+	<div class="container-xxl">
 		<div class="row">
 			<div class="col-md-12">
 			<span>Excellences</span>
@@ -68,31 +68,33 @@ get_header();
 </div>
 
 <div id="slider" class="pt-5 pb-5">
-	<div class="container">
+	<div class="container-xxl">
 		<div class="row">
 			<div class="col-md-12">
-				<p>Logos</p>
+				<div class="slider slider-for">
+				<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
+				<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
+				<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
+				<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
 			</div>
-		</div>
-	</div>
-</div>
-<div id="sliderbtm" class="pt-5 pb-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<p>info</p>
+			<div class="slider slider-nav">
+				<div><h3><span>Patiëntenspreiding op basis van data</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
+				<div><h3><span>Patiëntenspreiding op basis van data</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
+				<div><h3><span>Patiëntenspreiding op basis van data</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
+				<div><h3><span>Patiëntenspreiding op basis van data</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
+			</div>
 			</div>
 		</div>
 	</div>
 </div>
 <div id="whoweare" class="pt-5 pb-5">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-md-6">
+	<div class="container-xxl">
+		<div class="row align-items-center justify-content-between">
+			<div class="col-lg-5">
 				<h2>Wie we zijn</h2>
 				<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
 			</div>
-			<div class="col-md-6 whoweareimg">
+			<div class="col-lg-6 whoweareimg">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg"/>
 			</div>
 		</div>

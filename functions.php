@@ -38,11 +38,11 @@ add_action( 'after_setup_theme', 'website_setup' );
 /* Adding breadcrubs */
 function the_breadcrumb() {
 	if (!is_home()) {
-		echo '<a href="';
+		echo '<span class="breadcrumbs"><a href="';
 		echo get_option('home');
 		echo '">';
 		echo 'Home';
-		echo "</a> /";
+		echo "</a> / ";
 		if (is_category() || is_single()) {
 			the_category('title_li=');
 			if (is_single()) {
@@ -52,6 +52,7 @@ function the_breadcrumb() {
 		} elseif (is_page()) {
 			echo the_title();
 		}
+		echo '</span>';
 	}
 }
 
