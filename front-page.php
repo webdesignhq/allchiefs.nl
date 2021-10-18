@@ -15,7 +15,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<div class="bannerblocks pt-5 pb-5">
+	<div class="bannerblocks">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
@@ -42,7 +42,7 @@ get_header();
 		</div>
 	</div>
 </div>
-<div id="about" class="pt-5 pb-5">
+<div id="about" class="pt-5 pb-5 mb-5">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-md-6 aboutimg">

@@ -29,7 +29,7 @@
 		<div class="header">
 			<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-2 text-center">
+				<div class="col-lg-2 col-sm-6 text-center">
 					<div class="custom_logo">
 						<?php 
 							if ( function_exists( 'the_custom_logo' ) ) {
@@ -38,7 +38,7 @@
 							?>
 					</div> 
 				</div>
-				<div class="col-md-10 text-right"  id="menu">
+				<div class="col-lg-10 col-sm-6 text-right" id="menu">
 					<button class="menu-toggle btn"><i class="fas fa-bars"></i></button>
 					<nav id="site-navigation" class="main-navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -50,6 +50,23 @@
 			
 		</div>
 	</header>
+	
+	<?php if(!is_page(5)) { ?>
+		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover;">
+		<div class="container-xxl">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="bannerindexcontent text-left p-4">
+						<h1><?php echo get_the_title(); ?></h1>
+						<span><?php echo the_excerpt(); ?></span>
+						<p><?php the_breadcrumb(); ?></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
 
 
 
