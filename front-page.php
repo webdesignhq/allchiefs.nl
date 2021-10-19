@@ -42,7 +42,7 @@ get_header();
 		</div>
 	</div>
 </div>
-<div id="about" class="pt-5 pb-5 mb-5">
+<div id="about" class="mb-5">
 	<div class="container-xxl">
 		<div class="row align-items-center justify-content-between">
 			<div class="col-lg-6 col-lg-offset-1 aboutimg">

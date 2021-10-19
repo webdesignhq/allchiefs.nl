@@ -10,6 +10,11 @@ $(document).ready(function() {
 		// $('body').css("opacity", "1")
   	// }, 2000);
 	
+	$(".clickable").click(function(e) {
+		e.preventDefault();
+		window.location = $(this).find('a').attr('href');
+	});
+	
 	
 	 $('.slider-for').slick({
 	  slidesToShow: 3,
@@ -29,4 +34,16 @@ $(document).ready(function() {
 	  focusOnSelect: true,
 	  swipeToSlide: true,
 	});	 
+	
+	$(window).scroll(function(){
+    if ($(window).scrollTop() >= 100) {
+        $('.header').addClass('sticky-header');
+    }
+    else {
+        $('.header').removeClass('sticky-header');
+    }
+	
+	});
+	
 });
+

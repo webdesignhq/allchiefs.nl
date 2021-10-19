@@ -27,8 +27,7 @@
 </head>
 
 <body>
-	<header>
-		<div class="header">
+	<header class="header">
 			<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-2 col-sm-6 text-center">
@@ -40,7 +39,7 @@
 							?>
 					</div> 
 				</div>
-				<div class="col-lg-10 col-sm-6 text-right" id="menu">
+				<div class="col-lg-10 col-sm-6 text-right pe-5" id="menu">
 					<button class="menu-toggle btn"><i class="fas fa-bars"></i></button>
 					<nav id="site-navigation" class="main-navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -50,7 +49,6 @@
 			</div>
 			</div>
 			
-		</div>
 	</header>
 	
 	<?php if(!is_page(5)) { ?>

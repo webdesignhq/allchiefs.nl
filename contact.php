@@ -23,6 +23,7 @@ get_header();
 			<div class="col-md-4">
 				<img style="width:100%;" src="http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/rotterdam-top-view.jpg">
 				<h3>Allchiefs HQ</h3>
+				
 			</div>
 			<div class="col-md-4">
 					<img style="width:100%;" src="http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/rotterdam-top-view.jpg">

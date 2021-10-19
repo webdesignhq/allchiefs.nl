@@ -130,6 +130,37 @@ a:hover {
 	font-size: 20px;
 }
 
+.btn-secondary { 
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	border-radius: 0;
+	border: none;
+	padding: 10px 40px 10px 20px;
+	font-family: var(--primary-font);
+	transition: 0.4s;
+	position: relative;
+}
+
+.btn-secondary:hover { 
+	background-color: var(--secondary-color) !important;
+	transition: 0.4s;
+}
+
+.btn-secondary:hover::after {
+	padding-left: 15px;
+	transition: 0.4s;
+}
+
+.btn-secondary::after {
+	content: '>';
+	padding-left: 10px;
+	font-family: var(--primary-font);
+	position: absolute;
+	transition: 0.4s;
+	top: 15%;
+	font-size: 20px;
+}
+
 .read-more {
 	position: relative;
 }
@@ -160,6 +191,14 @@ a:hover {
 	background-color: var(--sustainability-color);
 }
 
+.fitforfuture-bg {
+	background-color: var(--fitforfuture-color);
+}
+
+.data-bg {
+	background-color: var(--data-color);
+}
+
 /* Header Section */
 .custom_logo {
 	z-index: 10;
@@ -172,9 +211,24 @@ header {
 	width: 100%;
 }
 
+.header {
+	    transition: 0.4s;
+}
+
 .breadcrumbs {
 	font-size:18px;
 	font-weight: bold;
+}
+
+.sticky-header {
+	position: fixed;
+    background: rgba(255,255,255,0.9);
+    transition: 0.4s;
+}
+
+
+.sticky-header .main-navigation a {
+	color: var(--secondary-color) !important;
 }
 
 
@@ -222,7 +276,6 @@ header {
 
 #banner  h1 {
 	color: var(--white-color);
-	text-transform: uppercase;
 }
 
 #banner span {
@@ -254,10 +307,22 @@ header {
 #about { 
 	height: 100%;
 	background: linear-gradient(90deg, var(--white-color) 30%, var(--sand-25) 20%, var(--sand-25) 50%);
+	padding: 100px 0;
 }
 
 #about .aboutimg img {
 	width: 100%;
+}
+
+#about .aboutimg {
+	position: relative;
+}
+
+#about .aboutimg:after {
+	content: url('http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/allchiefs-corner-left.png');
+	position: absolute;
+	top: -70px;
+    left: -60px;
 }
 
 
@@ -298,6 +363,8 @@ header {
 	background-color: var(--sand-25);
 }
 
+
+
 /* Contact Page */
 #contact {
 	height: 100%;
@@ -318,7 +385,7 @@ header {
 	width: 100%;
 }
 
-.chief img {
+.content img {
 	width: 100%;
 	height: 250px;
 	object-fit: cover;
@@ -337,7 +404,36 @@ header {
 
 /* Footer Section */
 #footer {
-	background-color: var(--sand-40);
+	margin-top: 100px;
+	background: linear-gradient(90deg, var(--sand-40) 95%, var(--sand-40) 20%, var(--white-color) 5%);
+	position: relative;
+	padding: 100px 0;
+}
+
+#footer ul li strong {
+	font-weight: 800;
+}
+
+#footer .slogan 
+{
+	font-size: 30px;
+	font-weight: 800;
+}
+
+#footer::after {
+	content: url('http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/allchiefs-corner-right.png');
+	position: absolute;
+	top: -70px;
+    right: 25px;
+	
+}
+
+#footer ul {
+	padding-inline-start: 0;
+}
+
+#footer ul li {
+	list-style: none;
 }
 
 

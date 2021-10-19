@@ -14,7 +14,7 @@
 ?>
 <footer>
 	<div id="footer">
-		<div class="container">
+		<div class="container-xxl">
 			<div class="row pt-5 pb-5">
 				<div class="col-md-4 small-12 columns">
 					<div class="custom_logo">
@@ -24,30 +24,44 @@
 								}
 							?>
 					</div>
-					<span>consultancy <br>with a heartbeat</span>
+					<span class="slogan">consultancy <br>with a heartbeat</span>
 				</div>
 				<div class="col-md-8 small-12 columns">
-					<h3>Waar zijn wij te vinden?</h3>
-					<div class="container">
+					<h3 class="pb-3">Waar zijn wij te vinden?</h3>
+					<div class="container p-0">
 						<div class="row">
-						<ul>
-							<li>Straatnaam 1A</li>
-							<li>0000AA Plaats</li>
-						</ul>
+							<div class="col-md-6">
+								<ul>
+									<li><strong>AllChiefs HQ</strong></li>
+								</ul>
+								<ul>
+									<li>Stationsplein 45</li>
+									<li>Unit A3.202</li>
+									<li>3013 AK Rotterdam</li>
+								</ul>
 
-						<ul>
-							<li>Straatnaam 1A</li>
-							<li>0000AA Plaats</li>
-							<li>(op afspraak)</li>
-						</ul>
+								<ul>
+									<li><a class="contact" href="#">+31(0)10 310 08</a></li>
+									<li><a href="mailto:info@allchiefs.nl">info@allchiefs.nl</a></li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+							<ul>
+								<li><strong>AllChiefs HUB</strong></li>
+							</ul>
+							<ul>
+								<li>Stationsplein 45</li>
+								<li>Unit A3.202</li>
+								<li>3013 AK Rotterdam</li>
+							</ul>
 
-						<ul>
-							<li><a class="contact" href="#">0523 615323</a></li>
-							<li><a href="mailto:info@allchiefs.nl">info@allchiefs.nl</a></li>
-						</ul>
+							<ul>
+								<li><a class="contact" href="#">+31(0)10 310 08</a></li>
+								<li><a href="mailto:info@allchiefs.nl">info@allchiefs.nl</a></li>
+							</ul>
+							</div>
 						</div>
 					</div>
-				</div>
 			
 				<div class="col-md-3">
 					
