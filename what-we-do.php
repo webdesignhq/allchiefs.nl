@@ -28,7 +28,6 @@ get_header();
 				<p class="pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
 				<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/people" class="btn btn-primary people-bg">Meer over people</a>
 			</div>
-			<div class="col-md-12"> 
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 			  <li class="nav-item" role="presentation">
 				<button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab" aria-controls="solutions" aria-selected="true">Oplossingen</button>
@@ -42,6 +41,7 @@ get_header();
 			</ul>
 			<div class="tab-content pt-5 pb-5 ps-2" id="myTabContent">
 			  <div class="tab-pane fade show active" id="solutions" role="tabpanel" aria-labelledby="solutions-tab">
+			  <div class="row">
 					<?php  
 							$args = array(
 								'post_type'      => 'solution',
@@ -64,6 +64,7 @@ get_header();
 							wp_reset_query();
 						?>
 						</div>
+							</div>
 				<div class="tab-pane fade" id="clientcases" role="tabpanel" aria-labelledby="clientcases-tab">Hier komen de clientcases</div>
 					<div class="tab-pane fade " id="chiefs" role="tabpanel" aria-labelledby="chiefs-tab">
 					<div class="container">
@@ -92,7 +93,6 @@ get_header();
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 	</div>
 </div>
@@ -122,6 +122,7 @@ get_header();
 			</ul>
 			<div class="tab-content pt-5 pb-5 ps-2" id="myTabContent">
 			  <div class="tab-pane fade show active" id="solutions" role="tabpanel" aria-labelledby="solutions-tab">
+			    <div class="row">
 					<?php  
 							$args = array(
 								'post_type'      => 'solution',
@@ -144,6 +145,7 @@ get_header();
 							wp_reset_query();
 						?>
 						</div>
+				</div>
 				<div class="tab-pane fade" id="clientcases" role="tabpanel" aria-labelledby="clientcases-tab">Hier komen de clientcases</div>
 					<div class="tab-pane fade " id="chiefs" role="tabpanel" aria-labelledby="chiefs-tab">
 					<div class="container">
@@ -187,7 +189,6 @@ get_header();
 				<p class="pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
 				<button type="button" class="btn btn-primary fitforfuture-bg">Meer over Fit for Future</button>
 			</div>
-			<div class="col-md-12"> 
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 			  <li class="nav-item" role="presentation">
 				<button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab" aria-controls="solutions" aria-selected="true">Oplossingen</button>
@@ -201,6 +202,7 @@ get_header();
 			</ul>
 			<div class="tab-content pt-5 pb-5 ps-2" id="myTabContent">
 			  <div class="tab-pane fade show active" id="solutions" role="tabpanel" aria-labelledby="solutions-tab">
+				<div class="row">
 					<?php  
 							$args = array(
 								'post_type'      => 'solution',
@@ -223,6 +225,7 @@ get_header();
 							wp_reset_query();
 						?>
 						</div>
+					</div>
 				<div class="tab-pane fade" id="clientcases" role="tabpanel" aria-labelledby="clientcases-tab">Hier komen de clientcases</div>
 					<div class="tab-pane fade " id="chiefs" role="tabpanel" aria-labelledby="chiefs-tab">
 					<div class="container">
@@ -251,7 +254,6 @@ get_header();
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 	</div>
 </div>
@@ -265,7 +267,6 @@ get_header();
 				<p class="pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
 				<button type="button" class="btn btn-primary data-bg">Meer over data</button>
 			</div>
-			<div class="col-md-12"> 
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 			  <li class="nav-item" role="presentation">
 				<button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab" aria-controls="solutions" aria-selected="true">Oplossingen</button>
@@ -279,6 +280,7 @@ get_header();
 			</ul>
 			<div class="tab-content pt-5 pb-5 ps-2" id="myTabContent">
 			  <div class="tab-pane fade show active" id="solutions" role="tabpanel" aria-labelledby="solutions-tab">
+			  	<div class="row">
 					<?php  
 							$args = array(
 								'post_type'      => 'solution',
@@ -301,6 +303,7 @@ get_header();
 							wp_reset_query();
 						?>
 						</div>
+								</div>	
 				<div class="tab-pane fade" id="clientcases" role="tabpanel" aria-labelledby="clientcases-tab">Hier komen de clientcases</div>
 					<div class="tab-pane fade " id="chiefs" role="tabpanel" aria-labelledby="chiefs-tab">
 					<div class="container">
@@ -328,7 +331,6 @@ get_header();
 								</div>
 						</div>
 					</div>
-				</div>
 			</div>
 		</div>
 	</div>
