@@ -48,6 +48,24 @@ $(document).ready(function() {
 	$(".menu-toggle").click(function(e) {
         $(".mobile__menu--container").toggleClass('mobile-active')
     });
+
+	$(".insight").hover(function(e){
+		let img = e.target.style.backgroundImage;
+		let container = $('#insights');
+		bi = img.slice(4, -1).replace(/['"]/g, "");	
+		console.log(bi);
+
+		console.log($('#insights').css)
+		$('#insights').css('background', `url(' ${ bi } ') `);
+
+
+
+	}, function(e){
+
+	});
+
+
+
 	
 });
 

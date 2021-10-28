@@ -462,6 +462,22 @@ header {
 	color: var(--secondary-color);
 }
  
+#insights{
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	transition: all .4s ease-out;
+}
+
+.insight{
+	opacity: 0;
+	position: relative;
+}
+
+.insight-content{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
 
 /* Footer Section */
 #footer {
