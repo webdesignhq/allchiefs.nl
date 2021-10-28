@@ -154,6 +154,46 @@ function create_post_type_2() {
 }
 add_action('init', 'create_post_type_2');
 
+/* Create post type solutions */
+function create_post_type_3() {
+	$supports = array(
+        'title',
+        'editor',
+        'thumbnail',
+        'excerpt',
+        'custom-fields',
+        'revisions',
+        'post-formats',
+    );
+    $labels = array(
+        'name' => 'Cases',
+        'singular_name' => 'Cases',
+        'menu_name' => 'Cases',
+        'name_admin_bar' => 'Cases',
+        'add_new' => 'Toevoegen',
+        'add_new_item' => 'Voeg cases toe',
+        'new_item' => 'Case',
+        'edit_item' => 'Bewerk case',
+        'view_item' => 'Bekijk case',
+        'all_items' => 'Alle cases',
+        'search_items' => 'Zoek cases',
+        'not_found' => 'Geen cases gevonden',
+    );
+    $args = array(
+        'supports' => $supports,
+        'labels' => $labels,
+        'public' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'cases'),
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-tag',
+        'hierarchical' => false,
+		'taxonomies'  => array( 'category' ),
+    );
+    register_post_type('case', $args);
+}
+add_action('init', 'create_post_type_3');
+
 
 /* Optionpage*/
 

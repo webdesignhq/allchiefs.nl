@@ -9,7 +9,7 @@ get_header();
 			<div class="col-md-5">
 				<h2>Ontdek jouw<br>nieuwe perspectief</h2>
 				<p class="pt-4 pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
-				<button type="button" class="btn btn-primary people-big">People</button> <button type="button" class="btn btn-primary sustainability-big">Sustainability</button> <button type="button" class="btn btn-primary">Fit for Future</button> <button type="button" class="btn btn-primary">Data</button>
+				<a href="#people" class="btn btn-primary people-big">People</a> <a href="#sustainability" class="btn btn-primary sustainability-big">Sustainability</a> <a href="#fitforfuture" class="btn btn-primary">Fit for Future</a> <a href="#data" class="btn btn-primary">Data</a>
 			</div>
 			<div class="col-md-6 whatwedoimg">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg"/>
@@ -26,7 +26,7 @@ get_header();
 			</div>
 			<div class="col-md-6">
 				<p class="pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
-				<button type="button" class="btn btn-primary people-bg">Meer over people</button>
+				<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/people" class="btn btn-primary people-bg">Meer over people</a>
 			</div>
 			<div class="col-md-12"> 
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
