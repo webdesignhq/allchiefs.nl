@@ -45,5 +45,9 @@ $(document).ready(function() {
 	
 	});
 	
+	$(".menu-toggle").click(function(e) {
+        $(".mobile__menu--container").toggleClass('mobile-active')
+    });
+	
 });
 

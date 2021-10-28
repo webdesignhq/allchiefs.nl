@@ -48,15 +48,21 @@
 				
 			</div>
 			</div>
-			
+			<div class="mobile__menu--container d-lg-none d-block">
+				<div class="relative">
+					<nav id="mobile-site-navigation" class="main-navigation absolute d-block d-lg-none">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+					</nav>
+				</div>
+			</div>		
 	</header>
 	
 	<?php if(!is_page(5)) { ?>
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover;">
 		<div class="container-xxl">
-			<div class="row">
-				<div class="col-md-8">
+			<div class="product__container col-12 d-lg-flex d-block flex-row">
+				<div class="d-flex flex-column">
 					<div class="bannerindexcontent text-left p-4">
 						<h1><?php echo get_the_title(); ?></h1>
 						<span><?php echo the_excerpt(); ?></span>
