@@ -32,7 +32,7 @@ get_header();
 					$args = array(
 						'post_type'      => 'solution',
 						'posts_per_page' => 4,
-						'category' => 3,
+						'category' => 'people',
 					);
 
 					$loop = new WP_Query( $args );

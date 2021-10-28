@@ -21,22 +21,22 @@ get_header();
 				<div class="col-md-3">
 					<span>People</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
-					<a href="#" class="read-more">Lees meer</a>
+					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#people" class="read-more">Lees meer</a>
 				</div>
 				<div class="col-md-3">
 					<span>Sustainability</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
-					<a href="#" class="read-more">Lees meer</a>
+					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#sustainability" class="read-more">Lees meer</a>
 				</div>
 				<div class="col-md-3">
 					<span>Fit for Future</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
-					<a href="#" class="read-more">Lees meer</a>
+					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#fitforfuture" class="read-more">Lees meer</a>
 				</div>
 				<div class="col-md-3">
 					<span>Data</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
-					<a href="#" class="read-more">Lees meer</a>
+					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#data" class="read-more">Lees meer</a>
 				</div>
 			</div>
 		</div>
