@@ -188,6 +188,10 @@ a:hover {
 	color: var(--primary-color);
 }
 
+.clickable{
+	cursor: pointer;
+}
+
 
 .people-bg {
 	background-color: var(--people-color);
@@ -310,6 +314,16 @@ header {
 	color: var(--white-color);
 	font-size: 16px;
 	font-weight: 300;
+}
+
+#banner .bannerblocks .bannerblock{
+	border-right: solid 1px var(--white-color);
+	padding: 25px;
+	padding-left: 50px;
+}
+
+#banner .bannerblocks .bannerblock:last-child{
+	border: unset;
 }
 
 /* About Section */
@@ -487,6 +501,7 @@ header {
 	color: var(--white-color);
 	font-weight: bold;
 	transition: all .3s ease-in-out;
+	font-size: 24px;
 }
 
 .insight-exerpt{
@@ -497,6 +512,8 @@ header {
 	color: var(--white-color);
 	transition: all .3s ease-in-out;
 	height: 100px;
+	font-size: 16px;
+	line-height: 31px;
 }
 
 .insight-image{
@@ -504,13 +521,18 @@ header {
 }
 
 .insight-container{
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.26);
 	padding: 0;
 	transition: all .3s ease-out;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.insight-container:first-child{
+	margin-left: unset;
 }
 
 .insight-container:hover{
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.54);
 }
 
 .insight-container:hover .insight-title{

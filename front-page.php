@@ -18,22 +18,22 @@ get_header();
 	<div class="bannerblocks">
 		<div class="container-xxl">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-3 bannerblock">
 					<span>People</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#people" class="read-more">Lees meer</a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 bannerblock">
 					<span>Sustainability</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#sustainability" class="read-more">Lees meer</a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 bannerblock">
 					<span>Fit for Future</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#fitforfuture" class="read-more">Lees meer</a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 bannerblock">
 					<span>Data</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#data" class="read-more">Lees meer</a>
@@ -105,7 +105,7 @@ get_header();
 
 <div id="insights" class="my-5" style="background: url('')">
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row flex-nowrap">
 			<?php  
 				$args = array(
 					'post_type'      => 'post',
@@ -117,11 +117,12 @@ get_header();
 				while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				<?php global $post; ?>
 				<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-				<div class="col-md-3 position-relative border insight-container">
-					<div class="insight" style="height: 600px; background-image: url(''); background-size: cover;">
+				<div class="col-md-3 position-relative insight-container">
+					<div class="insight clickable" style="height: 600px; background-image: url(''); background-size: cover;">
 						<p class="insight-image"><?php echo $backgroundImg[0]; ?></p>
 						<p class="insight-title"><?php echo get_the_title(); ?></p>
 						<p class="insight-exerpt"><?php echo get_the_content(); ?></p>
+						<a class="d-none" href="<?php echo get_permalink();?>"> </a>
 					</div>
 					<!-- <div class="insight-content">
 						 <a href="<?php echo get_permalink();?>"> <?php echo get_the_title(); ?></a>

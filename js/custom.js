@@ -50,12 +50,7 @@ $(document).ready(function() {
     });
 
 	$(".insight").hover(function(e){
-		let img = e.target.style.backgroundImage;
 		let target = e.target.childNodes[1].innerHTML;
-		console.log(target)
-		let container = $('#insights');
-		bi = img.slice(4, -1).replace(/['"]/g, "");	
-		console.log(bi);
 		$('#insights').css('background', `url(' ${ target } ') `);
 	}, function(e){
 

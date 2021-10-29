@@ -27,7 +27,7 @@
 					<span class="slogan">consultancy <br>with a heartbeat</span>
 				</div>
 				<div class="col-md-8 small-12 columns">
-					<h3 class="pb-3">Waar zijn wij te vinden?</h3>
+					<h3 class="pb-3">Waar zijn we te vinden?</h3>
 					<div class="container p-0">
 						<div class="row">
 							<div class="col-md-6">
