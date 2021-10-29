@@ -465,11 +465,12 @@ header {
 #insights{
 	background-repeat: no-repeat!important;
 	background-size: cover!important;
+	background-position: center!important;
 	transition: all .4s ease-out;
 }
 
 .insight{
-	opacity: 0;
+	/* opacity: 0; */
 	position: relative;
 }
 
@@ -478,6 +479,50 @@ header {
 	top: 15px;
 	left: 15px;
 }
+
+.insight-title{
+	position: absolute;
+	bottom: 40px;
+	left: 35px;
+	color: var(--white-color);
+	font-weight: bold;
+	transition: all .3s ease-in-out;
+}
+
+.insight-exerpt{
+	position: absolute;
+	bottom: 0px;
+	left: 35px;
+	opacity: 0;
+	color: var(--white-color);
+	transition: all .3s ease-in-out;
+	height: 100px;
+}
+
+.insight-image{
+	display: none;
+}
+
+.insight-container{
+	background-color: rgba(0,0,0,0.1);
+	padding: 0;
+	transition: all .3s ease-out;
+}
+
+.insight-container:hover{
+	background-color: rgba(0,0,0,0.3);
+}
+
+.insight-container:hover .insight-title{
+	bottom: 150px;
+}
+
+.insight-container:hover .insight-exerpt{
+	opacity: 1;
+	bottom: 40px;
+}
+
+
 
 /* Footer Section */
 #footer {

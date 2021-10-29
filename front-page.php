@@ -103,7 +103,7 @@ get_header();
 
 <?php $backgroundImg ?>
 
-<div id="insights" class="pt-5 pb-5" style="background: url('')">
+<div id="insights" class="my-5" style="background: url('')">
 	<div class="container-fluid">
 		<div class="row">
 			<?php  
@@ -115,14 +115,17 @@ get_header();
 				$loop = new WP_Query( $args );
 
 				while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<?php global $post; ?>
 				<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-				<div class="col-md-3 position-relative border">
-					<div class="insight" style="height: 600px; background-image: url('<?php echo $backgroundImg[0]; ?>'); background-size: cover;">
-						
+				<div class="col-md-3 position-relative border insight-container">
+					<div class="insight" style="height: 600px; background-image: url(''); background-size: cover;">
+						<p class="insight-image"><?php echo $backgroundImg[0]; ?></p>
+						<p class="insight-title"><?php echo get_the_title(); ?></p>
+						<p class="insight-exerpt"><?php echo get_the_content(); ?></p>
 					</div>
-					<div class="insight-content"><?php global $post; ?>
-						 <a href="<?php echo get_permalink();?>"> <?php echo get_the_title(); ?> 		</a>
-					</div>
+					<!-- <div class="insight-content">
+						 <a href="<?php echo get_permalink();?>"> <?php echo get_the_title(); ?></a>
+					</div> -->
 				</div> 
 				<?php endwhile;
 
