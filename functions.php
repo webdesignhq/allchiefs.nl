@@ -217,8 +217,85 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'Footer instellingen',
 		'menu_title'	=> 'Footer',
 		'parent_slug'	=> 'theme-general-settings',
-	));
-	
-	
+	));	
 }
-?>
+
+add_action('wp_ajax_myfilter', 'filter_function'); // wp_ajax_{ACTION HERE} 
+add_action('wp_ajax_nopriv_myfilter', 'filter_function');
+
+function filter_function(){
+	$args = array(
+		'post_type' => 'case',
+		'orderby' => 'date', // we will sort posts by date
+		'order'	=> 'ASC' // ASC or DESC
+	);
+    var_dump($args);
+	
+    // for taxonomies / categories
+	if( isset( $_POST['categoryfilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'post_cat',
+				'field' => 'id',
+				'terms' => $_POST['categoryfilter']
+			)
+		);
+ 
+	// create $args['meta_query'] array if one of the following fields is filled
+	if( isset( $_POST['price_min'] ) && $_POST['price_min'] || isset( $_POST['price_max'] ) && $_POST['price_max'])
+		$args['meta_query'] = array( 'relation'=>'AND' ); // AND means that all conditions of meta_query should be true
+ 
+	// if both minimum price and maximum price are specified we will use BETWEEN comparison
+	if( isset( $_POST['price_min'] ) && $_POST['price_min'] && isset( $_POST['price_max'] ) && $_POST['price_max'] ) {
+		$args['meta_query'][] = array(
+			'key' => '_price',
+			'value' => array( $_POST['price_min'], $_POST['price_max'] ),
+			'type' => 'numeric',
+			'compare' => 'between'
+		);
+	} else {
+		// if only min price is set
+		if( isset( $_POST['price_min'] ) && $_POST['price_min'] )
+			$args['meta_query'][] = array(
+				'key' => '_price',
+				'value' => $_POST['price_min'],
+				'type' => 'numeric',
+				'compare' => '>'
+			);
+ 
+		// if only max price is set
+		if( isset( $_POST['price_max'] ) && $_POST['price_max'] )
+			$args['meta_query'][] = array(
+				'key' => '_price',
+				'value' => $_POST['price_max'],
+				'type' => 'numeric',
+				'compare' => '<'
+			);
+	}
+ 
+	// if you want to use multiple checkboxed, just duplicate the above 5 lines for each checkbox
+ 
+	$query = new WP_Query( $args );
+	
+	if( $query->have_posts() ) :
+		while( $query->have_posts() ): $query->the_post(); 
+		global $product;
+		?>
+		<div class="product d-flex flex-column mt-1 clickable justify-content-between">
+			<i class="fa-regular fa-heart product__favorites--button" aria-hidden="true"></i>
+			<img style="width:100%;" src="<?php echo wp_get_attachment_url( $product->get_image_id() ); ?>" class="product__image mx-auto" />
+			<p class="product-title mt-4"><?php the_title() ?></p>
+			<span class="product-price"><?php echo $product->get_price_html();  ?></span>
+			<!-- <?php echo '<a href="'. $checkout_url.'?add-to-cart=' .$productID. '" class="btn btn-primary">'?>In winkelwagen</a> -->
+			<a href="<?php echo get_permalink(); ?>" class="btn btn-primary"><?php the_field('txt-btn', 'option'); ?></a>
+		</div>
+		</div>
+
+		<?php endwhile;
+		wp_reset_postdata();
+	else :
+		echo 'Geen cases gevonden';
+	endif;
+	
+	die();
+}

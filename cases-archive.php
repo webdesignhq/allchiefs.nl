@@ -4,28 +4,80 @@
 get_header();
 ?>
 <?php the_content();?>
-<div id="content">
-	<div class="row content">
-		<div class="medium-12 columns">
-			<div class="columns">
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<article class="<?php post_class(); ?>">
-					<h1><?php the_title(); ?></h1>
-					<div class="post-content">
-						<?php the_content(); ?>
-					</div>
-					<a href="<?php the_permalink(); ?>">Lees meer</a>
-				</article>
-			<?php endwhile; // end of the loop. ?>
-				 
-				<p align="center"><?php posts_nav_link(); ?></p>
-			</div>
-		
+<div id="cases" class="pt-5" style="background: linear-gradient(
+		270deg, var(--white-color) 30%, var(--sand-25) 20%, var(--sand-25) 50%);">
+	<div id="filters">
+		<div class="container-xxl">
+			<div class="row">
+				<div class="col-3">
+					<span>Per expertise</span>
+					<?php
+						$args = array(
+						'post_type'                     => 'case',
+						'child_of'                 => 0,
+						'parent'                   => '',
+						'orderby'                  => 'name',
+						'order'                    => 'ASC',
+						'hide_empty'               => 1,
+						'hierarchical'             => 1,
+						'pad_counts'               => false );
+						$categories = get_categories($args);
+					?>
+				<form action="<?php echo site_url()?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+						<?php 
+						foreach ($categories as $category) {
+							$url = get_term_link($category);?>
+							<input type="radio" class="category__filter--input" id="<?php echo $category->name; ?>" value="<?php echo $category->cat_ID; ?>" name="categoryfilter"/>
+							<label for="<?php echo $category->name; ?>"><?php echo $category->name; ?></label>
+							<?php
+						}
+						?>
+						<input type="hidden" name="action" value="myfilter">
+						<button> sub </button>
+				</form>
+					
+				</div>
+				<div class="col-6"> <span>Per expertise</span> </div>
+				<div class="col-3"> <span>Zoekding</span> </div>
+			</div>	
 		</div>
-	</div>	
-</div>	
-	
+	</div>
+
+	<div id="cases">
+		<div class="container-xxl">
+			<div class="row flex-wrap pt-5 justify-content-between" id="response">
+			<?php if (have_posts()) : ?>     
+		<?php  
+					$args = array(
+						'post_type'      => 'case',
+						'posts_per_page' => 8
+					);
+
+					$loop = new WP_Query( $args );
+
+					while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<?php global $post; ?>
+					<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+					<div class="position-relative post-container mt-5">
+						<div class="post clickable me-4">
+							<img class="post-image" src="<?php echo $backgroundImg[0]; ?>" style="width: 100%; height: 200px; object-fit: cover;"></img>
+							<p class="post-title mt-4"><?php echo get_the_title(); ?></p>
+							<p class="post-exerpt"><?php echo get_the_content(); ?></p>
+							<a class="d-none" href="<?php echo get_permalink();?>"> </a>
+						</div>
+					</div> 
+					<?php endwhile; ?>
+
+					<?php else: ?>
+						<p>Sorry, er zijn geen producten gevonden<p>
+					<?php endif 
+
+					// wp_reset_query();
+				?>
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php
 get_footer();

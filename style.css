@@ -545,6 +545,20 @@ header {
 }
 
 
+/* Cases */
+#cases{
+
+}
+.post-container{
+	max-width: 24%!important;
+}
+.post-title{
+	font-size: 28px;
+}
+.post-exerpt{
+	font-size: 18px;
+}
+
 
 /* Footer Section */
 #footer {
