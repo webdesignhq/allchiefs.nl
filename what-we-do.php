@@ -26,7 +26,7 @@ get_header();
 			</div>
 			<div class="col-md-6">
 				<p class="pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
-				<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/people" class="btn btn-primary people-bg">Meer over people</a>
+				<a href="../wat-we-doen/people" class="btn btn-primary people-bg">Meer over people</a>
 			</div>
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 			  <li class="nav-item" role="presentation">
@@ -106,7 +106,7 @@ get_header();
 			</div>
 			<div class="col-md-6">
 				<p class="pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
-				<button type="button" class="btn btn-primary sustainability-bg">Meer over sustainability</button>
+				<a href="../wat-we-doen/sustainability" class="btn btn-primary people-bg">Meer over sustainability</a>
 			</div>
 			<div class="col-md-12"> 
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -187,7 +187,7 @@ get_header();
 			</div>
 			<div class="col-md-6">
 				<p class="pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
-				<button type="button" class="btn btn-primary fitforfuture-bg">Meer over Fit for Future</button>
+				<a href="../wat-we-doen/fit-for-future" class="btn btn-primary people-bg">Meer over Fit For Future</a>
 			</div>
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 			  <li class="nav-item" role="presentation">
@@ -265,7 +265,7 @@ get_header();
 			</div>
 			<div class="col-md-6">
 				<p class="pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
-				<button type="button" class="btn btn-primary data-bg">Meer over data</button>
+				<a href="../wat-we-doen/data" class="btn btn-primary people-bg">Meer over data</a>
 			</div>
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 			  <li class="nav-item" role="presentation">
