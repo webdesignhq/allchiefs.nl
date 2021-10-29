@@ -1,11 +1,9 @@
 <?php
-/* 
-Template Name: Archives
-*/
+/* Template Name: Case Archive */
 
 get_header();
 ?>
-
+<?php the_content();?>
 <div id="content">
 	<div class="row content">
 		<div class="medium-12 columns">
@@ -17,7 +15,7 @@ get_header();
 					<div class="post-content">
 						<?php the_content(); ?>
 					</div>
-					<a href="<?php the_permalink(); ?>">Read more</a>
+					<a href="<?php the_permalink(); ?>">Lees meer</a>
 				</article>
 			<?php endwhile; // end of the loop. ?>
 				 
