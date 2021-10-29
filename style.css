@@ -440,17 +440,11 @@ header {
 
 /* Excellences single */
 
-
-#intro-excellence {
-	background: linear-gradient(90deg, var(--white-color) 40%, var(--people-color-5) 15%, var(--people-color-5) 55%);
-}
-
 #intro-excellence img {
 	width: 100%;
 }
 
 #excellence-solutions {
-	background-color: var(--people-color-5);
 	padding: 100px 0;
 }
 
