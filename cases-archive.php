@@ -41,14 +41,18 @@ get_header();
 				<div class="col-5"> <span>Type</span> 
 					<ul class="cat-list">
 						<?php
-						$colors = get_field('colors');
-						if( $colors ): ?>
-						<ul>
-							<?php foreach( $colors as $color ): ?>
-								<li><?php echo $color; ?></li>
-							<?php endforeach; ?>
-						</ul>
-						<?php endif; ?>
+							$fieldkey = 'field_617fc258c002d';
+							$fields = get_field_object($fieldkey);
+							$types = $fields['choices'];
+								if ($fields) {
+									foreach ($types as $type) {?>
+										<li> 
+											<a class="cat-list_item" href="#!" data-slug="" data-type="case">
+											<?php echo $fields['label'][ $type ]; ?>
+											</a>	
+										</li>
+							<?php }
+						}?>
 					</ul>	
 				</div>
 				<div class="col-3"> <span>Zoekding</span> </div>
@@ -69,7 +73,8 @@ get_header();
 					$loop = new WP_Query( $args );
 
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<?php global $post; ?>
+					<?php global $post; 
+					?>
 					<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 					<div class="position-relative post-container mt-5">
 						<div class="post clickable me-4">
