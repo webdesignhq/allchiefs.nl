@@ -365,6 +365,10 @@ header {
 	opacity: 1;
 }
 
+.chief:nth-child(5n+5) .chief__information{
+	left: -350px;
+}
+
 /* Excellences Section */
 #excellences {
 	background-color: var( --sand-25);
