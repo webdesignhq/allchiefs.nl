@@ -223,15 +223,18 @@ if( function_exists('acf_add_options_page') ) {
 function filter_projects() {
 	$catSlug = $_POST['category'];
   $typeSlug = $_POST['type'];
-	$ajaxposts = new WP_Query([
-	  'post_type' => $typeSlug,
-	  'posts_per_page' => 8,
-	  'category_name' => $catSlug,
-	  'orderby' => 'menu_order', 
-	  'order' => 'desc'
-	]);
+
+  $ajaxposts = new WP_Query([
+    'post_type' => $typeSlug,
+    'posts_per_page' => 8,
+    'category_name' => $catSlug,
+    'orderby' => 'menu_order', 
+    'order' => 'desc'
+  ]);
+
 	$response = '';
-  
+
+
 	if($ajaxposts->have_posts()) {
 	  while($ajaxposts->have_posts()) : $ajaxposts->the_post();
 		global $post;
@@ -256,4 +259,3 @@ function filter_projects() {
   }
   add_action('wp_ajax_filter_projects', 'filter_projects');
   add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
-  

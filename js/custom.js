@@ -47,8 +47,6 @@ $(document).ready(function() {
 
 	});
 
-	$('.cat-list_item').first().trigger("click");
-
 	$('.cat-list_item').on('click', function() {
 		$('.cat-list_item').removeClass('active');
 		$(this).addClass('active');
