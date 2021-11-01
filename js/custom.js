@@ -1,21 +1,11 @@
 $(document).ready(function() {
-	// $('.se-pre-con').css("display", "block");
-  
-	// $('body').css("opacity", "0");
-  
-	// setTimeout(
-  	// function() 
-  	// {	
-    	// $('.se-pre-con').fadeOut("slow");
-		// $('body').css("opacity", "1")
-  	// }, 2000);
-	
+
 	$(".clickable").click(function(e) {
 		e.preventDefault();
 		window.location = $(this).find('a').attr('href');
+		console.log('clik');
 	});
-	
-	
+
 	 $('.slider-for').slick({
 	  slidesToShow: 3,
 	  slidesToScroll: 1,
@@ -51,29 +41,31 @@ $(document).ready(function() {
 
 	$(".insight").hover(function(e){
 		let target = e.target.childNodes[1].innerHTML;
+		console.log(target);
 		$('#insights').css('background', `url(' ${ target } ') `);
 	}, function(e){
 
 	});
 
-	$('#filter').submit(function(){
-		var filter = $('#filter');
+	$('.cat-list_item:first-child').first().addClass('active');
+
+	$('.cat-list_item').on('click', function() {
+		$('.cat-list_item').removeClass('active');
+		$(this).addClass('active');
+	  
 		$.ajax({
-			url:filter.attr('action'),
-			data:filter.serialize(), // form data
-			type:filter.attr('method'), // POST
-			beforeSend:function(xhr){
-				filter.find('button').text('Processing...'); // changing the button label
-			},
-			success:function(data){
-				filter.find('button').text('Filter toepassen'); // changing the button label back
-				$('#response').html(data); // insert data
-			}
-		});
-		return false;
-	});
-
-
-	
+		  type: 'POST',
+		  url: '/allchiefs.nl/wp-admin/admin-ajax.php',
+		  dataType: 'html',
+		  data: {
+			action: 'filter_projects',
+			category: $(this).data('slug'),
+			type: $(this).data('type'),
+		  },
+		  success: function(res) {
+			$('#response').html(res);
+		  }
+		})
+	  });
 });
 

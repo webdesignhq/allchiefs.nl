@@ -553,6 +553,27 @@ header {
 	font-size: 18px;
 }
 
+#filters .cat-list{
+	list-style: none;
+	display: block;
+	padding: 0;
+	margin-top: 15px;
+}
+
+#filters .cat-list li{
+	position: relative;
+	display: inline-block!important;
+}
+
+#filters .cat-list .cat-list_item{
+	padding: 12px 24px;
+} 
+
+#filters .cat-list .active{
+	background-color: var(--primary-color);
+	color: var(--white-color);
+}
+
 
 /* Footer Section */
 #footer {

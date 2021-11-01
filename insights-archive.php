@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Case Archive */
+/* Template Name: Insight Archive */
 
 get_header();
 ?>
@@ -13,9 +13,6 @@ get_header();
 					<span>Per expertise</span>
 					<?php
 						$args = array(
-						'post_type'                     => 'case',
-						'child_of'                 => 0,
-						'parent'                   => '',
 						'orderby'                  => 'name',
 						'order'                    => 'ASC',
 						'hide_empty'               => 1,
@@ -28,7 +25,7 @@ get_header();
 						foreach ($categories as $category) {
 						?>
 							<li>
-								<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
+								<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="">
 							 	<?php echo $category->name ?>
 								</a>
 						 	</li>
@@ -54,7 +51,6 @@ get_header();
 			<?php if (have_posts()) : ?>     
 		<?php  
 					$args = array(
-						'post_type'      => 'case',
 						'posts_per_page' => 8,
 						'category_name' => 'Data'
 					);
