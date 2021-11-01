@@ -48,7 +48,7 @@ get_header();
 									foreach ($types as $type) {?>
 										<li> 
 											<a class="cat-list_item" href="#!" data-slug="" data-type="case">
-											<?php echo $fields['label'][ $type ]; ?>
+											<?php echo $fields['type-list'][ $type ]; ?>
 											</a>	
 										</li>
 							<?php }
