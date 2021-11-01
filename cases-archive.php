@@ -40,7 +40,15 @@ get_header();
 				</div>
 				<div class="col-5"> <span>Type</span> 
 					<ul class="cat-list">
-					
+						<?php
+						$colors = get_field('colors');
+						if( $colors ): ?>
+						<ul>
+							<?php foreach( $colors as $color ): ?>
+								<li><?php echo $color; ?></li>
+							<?php endforeach; ?>
+						</ul>
+						<?php endif; ?>
 					</ul>	
 				</div>
 				<div class="col-3"> <span>Zoekding</span> </div>
@@ -56,7 +64,6 @@ get_header();
 					$args = array(
 						'post_type'      => 'case',
 						'posts_per_page' => 8,
-						'category_name' => 'Data'
 					);
 
 					$loop = new WP_Query( $args );

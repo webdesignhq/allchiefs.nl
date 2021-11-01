@@ -349,7 +349,6 @@ header {
     left: -60px;
 }
 
-
 /* Excellences Section */
 #excellences {
 	background-color: var( --sand-25);
@@ -385,6 +384,29 @@ header {
 
 #data, #sustainability {
 	background-color: var(--sand-25);
+}
+
+#section-2{
+	margin-top: 300px;
+}
+
+#section-3{
+	margin-top: 110px;
+	padding-top: 110px;
+}
+
+.chief{
+	width: 16%;
+	height: 250px;
+	margin: 35px;
+}
+
+.chief:nth-child(5n+1){
+	margin-left: unset;
+}
+
+.chief:nth-child(5n+5){
+	margin-right: unset
 }
 
 

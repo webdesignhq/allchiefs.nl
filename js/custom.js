@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 	});
 
-	$('.cat-list_item:first-child').first().addClass('active');
+	$('.cat-list_item').first().trigger("click");
 
 	$('.cat-list_item').on('click', function() {
 		$('.cat-list_item').removeClass('active');
