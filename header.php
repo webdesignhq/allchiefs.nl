@@ -29,7 +29,7 @@
 <body>
 	<header class="header">
 			<div class="container-fluid">
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-lg-2 col-sm-6 text-center">
 					<div class="custom_logo">
 						<?php 

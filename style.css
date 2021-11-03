@@ -379,17 +379,17 @@ header {
 /* Slider Section */
 .slider-nav .slick-current {
 	background-color: var(--fitforfuture-color);
-	padding: 40px;
+	/* padding: 40px; */
 	color: #fff;
-	margin: 0 30px;
+	/* margin: 0 30px; */
 }
 
-.slider-nav .slick-current h3, .slider-nav .slick-current p { 
+/* .slider-nav .slick-current h3, .slider-nav .slick-current p { 
 	color: var(--white-color);
 }
-
+*/
 .slider-logo {
-	width: 300px;
+	width: 200px;
 	filter: grayscale(100%);
 }
 
@@ -398,16 +398,29 @@ header {
 }
 
 /* Who we are page */
+#whoweare .whoweareimg{
+	max-height: 700px;
+}
 #whoweare .whoweareimg img {
 	width: 100%;
+	max-height: 700px!important;
 }
 
 #data, #sustainability {
 	background-color: var(--sand-25);
 }
 
+#about-us{
+	padding-top: 100px!important;
+	padding-bottom: 100px!important;
+}
+
 #section-2{
 	margin-top: 300px;
+}
+
+#section-2 .content-height, #about-us .content-height{
+	height: 700px;
 }
 
 #section-3{

@@ -7,22 +7,27 @@ $(document).ready(function() {
 	});
 
 	 $('.slider-for').slick({
-	  slidesToShow: 3,
-	  slidesToScroll: 1,
-	  arrows: false,
-	  fade: true,
-	  asNavFor: '.slider-nav',
-	  centerMode: true,
+		centerMode: true,
+		centerPadding: '60px',
+		slidesToShow: 3.5,
+		slidesToScroll: 1,
+		asNavFor: '.slider-nav',
+		dots: false,
+		arrows: true,
+		focusOnSelect: true,
+		swipeToSlide: true,
+		infinite: true,
 	});
 	$('.slider-nav').slick({
 	  slidesToShow: 1.5,
 	  slidesToScroll: 1,
 	  asNavFor: '.slider-for',
 	  dots: false,
-	  arrows: false,
+	  arrows: true,
 	  centerMode: true,
 	  focusOnSelect: true,
 	  swipeToSlide: true,
+	  infinite: true,
 	});	 
 	
 	$(window).scroll(function(){

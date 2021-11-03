@@ -72,17 +72,17 @@ get_header();
 		<div class="row">
 			<div class="col-md-12">
 				<div class="slider slider-for">
-				<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
-				<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
-				<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
-				<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
-			</div>
-			<div class="slider slider-nav">
-				<div><h3><span>Patiëntenspreiding op basis van data</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
-				<div><h3><span>Patiëntenspreiding op basis van data</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
-				<div><h3><span>Patiëntenspreiding op basis van data</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
-				<div><h3><span>Patiëntenspreiding op basis van data</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
-			</div>
+					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
+					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2020/04/hema.png "></div>
+					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2020/04/Aegon-PNG.png "></div>
+					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
+				</div>
+				<div class="slider slider-nav">
+					<div><h3><span>Patiëntenspreiding op basis van data1</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
+					<div><h3><span>Patiëntenspreiding op basis van data2</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
+					<div><h3><span>Patiëntenspreiding op basis van data3</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
+					<div><h3><span>Patiëntenspreiding op basis van data4</span></h3><p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p></div>
+				</div>
 			</div>
 		</div>
 	</div>
