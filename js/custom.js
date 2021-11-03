@@ -59,6 +59,7 @@ $(document).ready(function() {
 			action: 'filter_projects',
 			category: $(this).data('slug'),
 			type: $(this).data('type'),
+			content: $(this).data('content'),
 		  },
 		  success: function(res) {
 			$('#response').html(res);

@@ -14,7 +14,7 @@ get_header();
             </div>
             <div class="col-5 offset-1 d-flex flex-column justify-content-center" >
                 <h2>Unieke kijk op consultrancy</h2>
-                <p class="mt-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
+                <p class="mt-4 col-10">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
 
             </div>
         </div>
@@ -26,7 +26,7 @@ get_header();
         <div class="row">
                 <div class="col-4 d-flex flex-column justify-content-center">
                     <h2>Wie we zijn</h2>
-                    <p class="mt-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
+                    <p class="mt-4 col-10">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
                 </div>
                 <div class="col-6 offset-2">
                     <div>
@@ -64,6 +64,8 @@ get_header();
                         <div class="chief__information p-5">
                             <h3><?php echo $post->post_title; ?></h3>
                             <p><?php echo $post->post_content; ?></p>
+                            <!-- foreach socialmedia link -->
+                            <!-- foreach expertise -->
                         </div>
                     </div>
 

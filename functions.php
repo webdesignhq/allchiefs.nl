@@ -223,17 +223,31 @@ if( function_exists('acf_add_options_page') ) {
 function filter_projects() {
 	$catSlug = $_POST['category'];
   $typeSlug = $_POST['type'];
+  $idSlug = $_POST['content'];
+
+  // $ajaxposts = new WP_Query([
+  //   'post_type' => $typeSlug,
+  //   'posts_per_page' => 8,
+  //   'category_name' => $catSlug,
+  //   'orderby' => 'menu_order', 
+  //   'order' => 'desc'
+  // ]);
 
   $ajaxposts = new WP_Query([
     'post_type' => $typeSlug,
     'posts_per_page' => 8,
     'category_name' => $catSlug,
     'orderby' => 'menu_order', 
-    'order' => 'desc'
+    'order' => 'desc',
+    'meta_query' =>
+      array(
+        'meta_key' => 'field_617fc258c002d',
+        'meta_value' => $idSlug,
+        'compare' => 'LIKE'
+      ),
   ]);
 
 	$response = '';
-
 
 	if($ajaxposts->have_posts()) {
 	  while($ajaxposts->have_posts()) : $ajaxposts->the_post();

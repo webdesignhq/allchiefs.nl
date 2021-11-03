@@ -353,12 +353,12 @@ header {
 	opacity: 0;
 	position: relative;
 	background-color: var(--white-color);
-	width: 700px;
+	width: 500px;
 	height: 500px;
 	box-shadow: 0px 0px 30px #00000029;
 	transition: all .1s ease-in;
 	top: -100px;
-	left: -50px;
+	left: -100px;
 }
 
 .chief:hover .chief__information{
@@ -366,7 +366,7 @@ header {
 }
 
 .chief:nth-child(5n+5) .chief__information{
-	left: -350px;
+	left: -100px;
 }
 
 /* Excellences Section */
