@@ -225,27 +225,13 @@ function filter_projects() {
   $typeSlug = $_POST['type'];
   $idSlug = $_POST['content'];
 
-  $ajaxposts = new WP_Query([
-    'post_type' => $typeSlug,
-    'posts_per_page' => 8,
-    'category_name' => $catSlug,
-    'orderby' => 'menu_order', 
-    'order' => 'desc'
-  ]);
-
-  // $ajaxposts = new WP_Query([
-  //   'post_type' => $typeSlug,
-  //   'posts_per_page' => 8,
-  //   'category_name' => $catSlug,
-  //   'orderby' => 'menu_order', 
-  //   'order' => 'desc',
-  //   'meta_query' =>
-  //     array(
-  //       'meta_key' => 'field_617fc258c002d',
-  //       'meta_value' => $idSlug,
-  //       'compare' => 'LIKE'
-  //     ),
-  // ]);
+    $ajaxposts = new WP_Query([
+      'post_type' => $typeSlug,
+      'posts_per_page' => 8,
+      'category_name' => $catSlug,
+      'orderby' => 'menu_order', 
+      'order' => 'desc'
+    ]);
 
 	$response = '';
 

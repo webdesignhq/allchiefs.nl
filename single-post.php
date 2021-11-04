@@ -38,6 +38,40 @@ get_header(); ?>
         // End the loop.
         endwhile;
         ?>
+
+        <div id="related">
+            <h2>Gerelateerde berichten</h2>
+            <div class="row">
+            <?php
+                $related_query = new WP_Query(array(
+                    'post_type' => 'post',
+                    'category__in' => wp_get_post_categories(get_the_ID()),
+                    'post__not_in' => array(get_the_ID()),
+                    'posts_per_page' => 3,
+                    'orderby' => 'date',
+                ));
+
+                while ($related_query->have_posts()) : $related_query->the_post();
+                global $post;
+            ?>
+
+                <div class="col-md-3 position-relative insight-container">
+					<div class="insight clickable" style="height: 275px; background-image: url(''); background-size: cover;">
+						<p class="insight-image"><?php echo $backgroundImg[0]; ?></p>
+						<p class="insight-title"><?php echo get_the_title(); ?></p>
+						<p class="insight-exerpt"><?php echo get_the_content(); ?></p>
+						<a class="d-none" href="<?php echo get_permalink();?>"> </a>
+					</div>
+					<!-- <div class="insight-content">
+						 <a href="<?php echo get_permalink();?>"> <?php echo get_the_title(); ?></a>
+					</div> -->
+				</div> 
+				<?php endwhile;
+
+				wp_reset_query();
+			?>
+        </div>
+        </div>
   
         </main><!-- .site-main -->
     </div><!-- .content-area -->

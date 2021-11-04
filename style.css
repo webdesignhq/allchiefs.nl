@@ -388,8 +388,9 @@ header {
 	color: var(--white-color);
 }
 */
+
 .slider-logo {
-	width: 200px;
+	width: 300px;
 	filter: grayscale(100%);
 }
 

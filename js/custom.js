@@ -19,12 +19,12 @@ $(document).ready(function() {
 		infinite: true,
 	});
 	$('.slider-nav').slick({
-	  slidesToShow: 1.5,
+	  centerMode: true,
+	  slidesToShow: 2,
 	  slidesToScroll: 1,
 	  asNavFor: '.slider-for',
 	  dots: false,
 	  arrows: true,
-	  centerMode: true,
 	  focusOnSelect: true,
 	  swipeToSlide: true,
 	  infinite: true,
