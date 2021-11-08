@@ -110,8 +110,10 @@
 			<div class="product__container col-12 d-lg-flex d-block flex-row">
 				<div class="d-flex flex-column">
 					<div class="bannerindexcontent text-left">
-						<h1 class="mb-3"><?php echo get_the_title(); ?></h1>
-						<p><?php the_breadcrumb(); ?></p>
+						<div class="container-lg">
+							<h1 class="mb-3"><?php echo get_the_title(); ?></h1>
+							<p><?php the_breadcrumb(); ?></p>
+						</div>
 					</div>
 				</div>
 			</div>
