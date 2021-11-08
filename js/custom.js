@@ -30,6 +30,30 @@ $(document).ready(function() {
 	  infinite: true,
 	});	 
 	
+
+	$('.case__slider').slick({
+		centerMode: false,
+		slidesToShow: 3.5,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		swipeToSlide: true,
+		infinite: false,
+	});
+
+		var $slider = $('.case__slider');
+		var $progressBar = $('.progress');
+		var $progressBarLabel = $( '.slider__label' );
+		
+		$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+		  var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+		  
+		  $progressBar
+			.css('background-size', calc + '% 100%')
+			.attr('aria-valuenow', calc );
+		  
+		});
+
 	$(window).scroll(function(){
     if ($(window).scrollTop() >= 100) {
         $('.header').addClass('sticky-header');

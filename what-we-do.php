@@ -8,7 +8,7 @@ get_header();
 		<div class="row align-items-center justify-content-between">
 			<div class="col-md-5">
 				<h2>Ontdek jouw<br>nieuwe perspectief</h2>
-				<p class="pt-4 pb-4">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
+				<p class="pt-4 pb-4 mb-5">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
 				<a href="#people" class="btn btn-primary people-big">People</a> <a href="#sustainability" class="btn btn-primary sustainability-big">Sustainability</a> <a href="#fitforfuture" class="btn btn-primary">Fit for Future</a> <a href="#data" class="btn btn-primary">Data</a>
 			</div>
 			<div class="col-md-6 whatwedoimg">

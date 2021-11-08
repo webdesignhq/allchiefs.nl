@@ -245,6 +245,12 @@ header {
 	color: var(--secondary-color) !important;
 }
 
+.header__overlay{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.25);
+}
+
 
 /* Banner Section */
 #banner {
@@ -600,7 +606,7 @@ header {
 
 }
 .post-container{
-	max-width: 24%!important;
+	max-width: 23%!important;
 }
 .post-title{
 	font-size: 28px;
@@ -636,6 +642,130 @@ header {
 	color: var(--white-color);
 }
 
+/* Single Case */
+#single__header .bannerindexcontent{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0,0,0,0.4);
+	bottom: 0;
+	left: 15%;
+	padding: 75px;
+}
+#single__header .bannerindexcontent h1{
+	font-size: 40px;
+}
+
+#intro{
+	margin: 90px 0;
+}
+.post__subtitle{
+	font-size: 30px;
+	line-height: 46px;
+}
+#team h3{
+	font-size: 20px;
+}
+
+.team__member, .expertise__area{
+	margin-top: 30px;
+	width: 130px;
+	height: 130px;
+	margin-right: 25px;
+	background-color: red;
+	display: inline-block;
+}
+
+#quote{
+	background-color: var(--sand-25);
+	padding: 90px 0;
+}
+
+#quote p{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 25px;
+	line-height: 50px;
+}
+
+.case__content{
+	padding: 90px 0;
+}
+
+.case__content:nth-child(odd){
+	background-color: var(--sand-25);
+}
+
+.case__content span{
+	font-size: 60px;
+	font-weight: bold;
+	color: var(--primary-color);
+	display: inline-block;
+}
+
+.case__content span h2{
+	display: inline-block;
+	font-size: 30px;
+}
+
+.case__content p{
+	margin-top: 50px;
+	font-size: 20px;
+	line-height: 40px;
+}
+
+#contact__block{
+	background-image: url('./img/rotterdam-top-view.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+#contact__block .header__overlay{
+	padding: 125px 0;
+	background-color: rgba(0,0,0,0.4);
+}
+
+#contact__block p{
+	color: var(--white-color);
+}
+
+.contact__block--title{
+	font-size: 45px;
+	font-weight: bold;
+	line-height: 68px;
+}
+
+.contact__block--subtitle{
+	font-size: 30px;
+	line-height: 40px;
+}
+
+#related_cases h2{
+	font-size: 45px;
+	font-weight: bold;
+}
+
+#related_cases{
+	margin-left: 150px!important;
+	margin: 90px 0;
+}
+
+#related_cases span p{
+	margin: 20px 0;
+	font-size: 20px;
+}
+
+#related_cases h4{
+	font-size: 25px;
+	font-weight: bold;
+	color: #444;
+}
+
+.case__slide img{
+	width: 100%;
+	height: 325px;
+	object-fit: cover;
+}
 
 /* Footer Section */
 #footer {

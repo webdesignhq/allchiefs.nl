@@ -47,7 +47,7 @@ get_header();
 
 	<div id="cases">
 		<div class="container-xxl">
-			<div class="row flex-wrap pt-5 justify-content-between" id="response">
+			<div class="row flex-wrap justify-content-between" id="response">
 			<?php if (have_posts()) : ?>     
 		<?php  
 					$args = array(
@@ -59,7 +59,7 @@ get_header();
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<?php global $post; ?>
 					<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-					<div class="position-relative post-container mt-5">
+					<div class="position-relative post-container my-5">
 						<div class="post clickable me-4">
 							<img class="post-image" src="<?php echo $backgroundImg[0]; ?>" style="width: 100%; height: 200px; object-fit: cover;"></img>
 							<p class="post-title mt-4"><?php echo get_the_title(); ?></p>
