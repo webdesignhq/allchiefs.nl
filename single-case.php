@@ -32,7 +32,7 @@ get_header();
 
 <div id="quote" class="my-5">
     <div class="container-lg" style="position: relative">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/allchiefs-corner-right.png" style="position: absolute; width: 4%; right: 0; top: 40px;" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/allchiefs-corner-right.png" style="position: absolute; width: 4%; right: 0; top: -10%;" />
         <p>“<?php echo get_field( "case_quote"); ?>”</p>
         <img src="<?php echo get_template_directory_uri(); ?>/img/allchiefs-corner-left.png" style="transform: rotate(270deg); position: absolute; width: 4%; left: -4%;
         bottom: -12%;" />
@@ -82,7 +82,7 @@ get_header();
                         'posts_per_page' => 6,
                         'orderby' => 'date',
                     ));
-
+                    
                     while ($related_query->have_posts()) : $related_query->the_post();
                     global $post;
                 ?>

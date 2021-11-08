@@ -94,6 +94,22 @@ $(document).ready(function() {
 			$('#response').html(res);
 		  }
 		})
-	  });
+	});
+
+	$('.nav-prev').on('mouseover', function() {
+		$('.prev-title').addClass('activePostNavPrev');
+	});
+
+	$('.nav-prev').on('mouseleave', function() {
+		$('.prev-title').removeClass('activePostNavPrev');
+	});
+
+	$('.nav-next-span').on('mouseover', function() {
+		$('.next-title').addClass('activePostNavNext');
+	});
+
+	$('.nav-next-span').on('mouseleave', function() {
+		$('.next-title').removeClass('activePostNavNext');
+	});
 });
 

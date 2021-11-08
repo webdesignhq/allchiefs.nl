@@ -79,7 +79,34 @@
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover;">
 		<div class="header__overlay"></div>
+
 		<div class="container-xxl" id="single__header">
+
+			<?php
+			// Start the loop.
+			while ( have_posts() ) : the_post();
+	
+				/*
+				* Include the post format-specific template for the content. If you want to
+				* use this in a child theme, then include a file called called content-___.php
+				* (where ___ is the post format) and that will be used instead.
+				*/
+				get_template_part( 'content', get_post_format() );
+
+				// Previous/next post navigation.
+				the_post_navigation( array(
+					'next_text' => '<span class="meta-nav nav-next-span" aria-hidden="true"><i class="fa fa-chevron-right"></i></span> ' .
+						'<span class="screen-reader-text">' . __( 'Next post:', 'hqonline' ) . '</span> ' .
+						'<span class="post-title next-title">%title</span>',
+					'prev_text' => '<span class="meta-nav nav-prev" aria-hidden="true"><i class="fa fa-chevron-left"></i></span> ' .
+						'<span class="screen-reader-text">' . __( 'Previous post:', 'hqonline' ) . '</span> ' .
+						'<span class="post-title prev-title">%title</span>',
+				) );
+	
+			// End the loop.
+			endwhile;
+			?>
+
 			<div class="product__container col-12 d-lg-flex d-block flex-row">
 				<div class="d-flex flex-column">
 					<div class="bannerindexcontent text-left">
