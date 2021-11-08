@@ -722,7 +722,7 @@ header {
 
 #contact__block .header__overlay{
 	padding: 125px 0;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 #contact__block p{

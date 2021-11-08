@@ -27,7 +27,7 @@ $(document).ready(function() {
 	  arrows: true,
 	  focusOnSelect: true,
 	  swipeToSlide: true,
-	  infinite: true,
+	  infinite: false,
 	});	 
 	
 

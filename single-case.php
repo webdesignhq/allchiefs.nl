@@ -31,8 +31,11 @@ get_header();
 </div>
 
 <div id="quote" class="my-5">
-    <div class="container-lg">
+    <div class="container-lg" style="position: relative">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/allchiefs-corner-right.png" style="position: absolute; width: 4%; right: 0; top: 40px;" />
         <p>“<?php echo get_field( "case_quote"); ?>”</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/allchiefs-corner-left.png" style="transform: rotate(270deg); position: absolute; width: 4%; left: -4%;
+        bottom: -12%;" />
     </div>
 </div>
 
@@ -61,8 +64,8 @@ get_header();
     <div class="header__overlay">
         <div class="container-lg text-center">
             <p class="contact__block--title">Geïnteresseerd</p>
-            <p class="contact__block--subtitle">Judith & Margit praten graag met je verder</p>
-            <a href="" class="btn btn-primary">Plan een afspraak</a>
+            <p class="contact__block--subtitle mt-4">Judith & Margit praten graag met je verder</p>
+            <a href="" class="btn btn-primary mt-4">Plan een afspraak</a>
         </div>
     </div>
 </div>
