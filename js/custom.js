@@ -5,6 +5,13 @@ $(document).ready(function() {
 		window.location = $(this).find('a').attr('href');
 		console.log('clik');
 	});
+	
+	$('.single-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true
+	});
 
 	 $('.slider-for').slick({
 		centerMode: true,

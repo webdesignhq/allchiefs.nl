@@ -49,10 +49,33 @@ get_header();
 <div id="opentofill" class="pt-5" style="background: var(--sand-25);">
     <div class="container-xxl">
         <div class="row">
-			<h2>Binnenkort vacatures </h3>
+			<h2>Binnenkort vacatures </h2>
 		</div>
 	</div>
 </div>
+
+<div id="experiences" class="pt-5" style="background: linear-gradient(-90deg, var(--white-color) 40%, var(--sand-25) 15%, var(--sand-25) 55%);">
+    <div class="container-xxl">
+        <div class="row">
+			<h2>Ervaringen van je nieuwe collega's</h2>
+			<div class="single-slider">
+			 <div><div class="col-6 d-flex">Andre Annema <p>“Ik vind een samenwerking voor ons pas geslaagd wanneer wij de klanten laten shinen, en niet andersom. Je werkt voor het succes van de klant. Het gaat niet om ons. Dus als wij door eerlijk samen te werken ervoor kunnen zorgen dat een klant succesvol wordt, dan is ons werk ook een succes.” </p></div><div class="col-6 d-flex"><img style="width:100%;" src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/themes/allchiefs.nl/img/rotterdam-top-view.jpg" alt="test"/></div></div>
+			  <div><div class="col-6 d-flex">Andre Annema <p>“Ik vind een samenwerking voor ons pas geslaagd wanneer wij de klanten laten shinen, en niet andersom. Je werkt voor het succes van de klant. Het gaat niet om ons. Dus als wij door eerlijk samen te werken ervoor kunnen zorgen dat een klant succesvol wordt, dan is ons werk ook een succes.” </p></div><div class="col-6 d-flex"><img style="width:100%;" src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/themes/allchiefs.nl/img/rotterdam-top-view.jpg" alt="test"/></div></div>
+			 <div><div class="col-6 d-flex">Andre Annema <p>“Ik vind een samenwerking voor ons pas geslaagd wanneer wij de klanten laten shinen, en niet andersom. Je werkt voor het succes van de klant. Het gaat niet om ons. Dus als wij door eerlijk samen te werken ervoor kunnen zorgen dat een klant succesvol wordt, dan is ons werk ook een succes.” </p></div><div class="col-6 d-flex"><img  style="width:100%;" src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/themes/allchiefs.nl/img/rotterdam-top-view.jpg" alt="test"/></div></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="kantour" class="pt-5">
+    <div class="container-xxl">
+        <div class="row">
+			<h2>Kantour</h2>
+		</div>
+	</div>
+</div>
+
 
 <?php
 get_footer();
