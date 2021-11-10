@@ -8,10 +8,11 @@ $(document).ready(function() {
 
 	 $('.slider-for').slick({
 		centerMode: true,
-		centerPadding: '60px',
-		slidesToShow: 3.5,
+		centerPadding: '100px',
+		slidesToShow: 5,
 		slidesToScroll: 1,
 		asNavFor: '.slider-nav',
+		variableWidth: true,
 		dots: false,
 		arrows: true,
 		focusOnSelect: true,
@@ -19,15 +20,16 @@ $(document).ready(function() {
 		infinite: true,
 	});
 	$('.slider-nav').slick({
-	  centerMode: true,
-	  slidesToShow: 2,
+	  slidesToShow: 1,
 	  slidesToScroll: 1,
+	  centerMode: true,
+	  centerPadding: '25%',
 	  asNavFor: '.slider-for',
 	  dots: false,
 	  arrows: true,
 	  focusOnSelect: true,
 	  swipeToSlide: true,
-	  infinite: false,
+	  infinite: true,
 	});	 
 	
 
