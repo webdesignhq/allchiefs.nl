@@ -273,7 +273,7 @@ header {
 }
 
 #bannerindex .bannerindexcontent { 
-	position: absolute;
+ position: absolute;
  bottom: 5%;
  width: 40%;
 }
@@ -377,10 +377,54 @@ header {
 
 /* Excellences Section */
 #excellences {
-	background-color: var( --sand-25);
-	height: 600px;
+	/* background-color: var( --sand-25); */
+	height: auto;
+	margin-top: 120px;
 }
 
+.excellence__head{
+	margin-bottom: 120px;
+}
+
+.excellence{
+	padding: 120px 0;
+	background-color: var(--sand-25);
+}
+
+.excellence p{
+	font-size: 20px;
+	line-height: 40px;
+}
+
+.excellence img{
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+.excellence h4{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#excellences .section__title{
+	font-size: 25px;
+	font-weight: bold;
+	color: #9B9B9B;
+}
+
+#excellences .section__subtitle{
+	font-size: 45px;
+	font-weight: bold;
+	color: var(--secondary-color);
+}
+
+#excellences .section-p{
+	font-size: 20px;
+	line-height: 40px;
+	padding: 0;
+	margin: 0;
+}
 
 /* Slider Section */
 .slider-nav .slick-current {

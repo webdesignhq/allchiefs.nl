@@ -4,7 +4,7 @@
 get_header();
 ?>
 <?php is_front_page(); ?>
-<div id="banner">
+<div id="banner" style="position: relative;">
 	<div class="container-xxl">
 		<div class="row">
 			<div class="col-md-8">
@@ -50,22 +50,63 @@ get_header();
 			</div>
 			<div class="col-lg-5">
 				<h2>Sta vandaag klaar voor de dag van morgen</h2>
-				<p>Wij zetten jou aan het stuur van je eigen verandering. Door verbinding maken we impact. Onze Chiefs excelleren op people, customers, performance en ecosystems en vooral waar deze samen komen. Wij zijn scherp en blikverruimend. Voor ons telt alleen het optimale resultaat.</p>
+				<p class="mt-4">Wij zetten jou aan het stuur van je eigen verandering. Door verbinding maken we impact. Onze Chiefs excelleren op people, customers, performance en ecosystems en vooral waar deze samen komen. Wij zijn scherp en blikverruimend. Voor ons telt alleen het optimale resultaat.</p>
 			</div>
 		</div>
 	</div>
 </div>
 
 <div id="excellences" class="pt-5 pb-5">
-	<div class="container-xxl">
+	<div class="container-xxl excellence__head">
 		<div class="row">
-			<div class="col-md-12">
-			<span>Excellences</span>
-				<h3>Hoe we organisaties helpen</h3>
+			<div class="col-md-4">
+			<span class="section__title">Excellences</span>
+				<h3 class="section__subtitle">Hoe we organisaties helpen</h3>
+			</div>
+			<div class="col-md-7 offset-1">
+				<p class="section-p">
+				AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.
+				</p>
 			</div>
 		</div>
 	</div>
+
+	<?php  
+				$args = array(
+					'post_type'      => 'page',
+					'posts_per_page' => -1,
+					'post_parent'	 => 10,
+					'order' => 'ASC'
+				);
+
+				$loop = new WP_Query( $args );
+				$i;
+				while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<?php global $post; ?>
+				<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+				<?php $icon = get_field('icon_excellence', $post->ID); ?>
+				<div class="excellence" style="background-color:<?php echo get_field('bgcolor_excellence'); ?>;">
+					<div class="container-xxl">
+						<div class="row">
+							<div class="col-md-4">
+								<img src="<?php echo $icon; ?>" class="excellence__icon"/>
+							</div>
+							<div class="col-md-7 offset-1">
+								<h4><?php echo $post->post_title; ?></h4>
+								<p><?php echo get_field('excellence_description', $post->ID); ?></p>
+								<a href="<?php echo get_permalink($post->ID); ?>" class="btn btn-primary" style="background-color:<?php echo get_field('color_excellence', $post->ID); ?>;"><?php echo $post->post_title; ?></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php endwhile;
+
+				wp_reset_query();
+			?>
+
 </div>
+
+
 
 <div id="slider" class="pt-5 pb-5">
 		<div class="row">
@@ -108,7 +149,7 @@ get_header();
 
 <?php $backgroundImg ?>
 
-<div id="insights" class="my-5" style="background: url('')">
+<div id="insights" class="my-5" style="background: url('<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg')">
 	<div class="container-fluid">
 		<div class="row flex-nowrap">
 			<?php  
