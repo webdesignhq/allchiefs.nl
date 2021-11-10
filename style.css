@@ -452,7 +452,7 @@ header {
 	padding: 70px;
 	background-color: #F9F9F9;
 	z-index: 10;
-	transition: transform .2s ease-in;
+	transition: all .2s ease-in;
 	height: 400px;
 	filter: grayscale(100%);
 }

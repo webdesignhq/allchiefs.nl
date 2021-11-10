@@ -112,73 +112,56 @@ get_header();
 		<div class="row">
 			<div class="col-md-12">
 				<div class="slider slider-for">
-					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
-					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2020/04/hema.png "></div>
-					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2020/04/Aegon-PNG.png "></div>
-					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
-					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
-					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
-					<div><img class="slider-logo" src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png"></div>
+				<?php  
+				$args = array(
+					'post_type'      => 'case',
+					'posts_per_page' => -1,
+					'order' => 'ASC'
+				);
+
+				$loop = new WP_Query( $args );
+				$i;
+				while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<?php global $post; ?>
+				<?php $icon = get_field('case_logo', $post->ID); ?>
+
+					<div><img class="slider-logo" src="<?php echo $icon; ?>"></div>
+					
+				<?php endwhile;
+
+				wp_reset_query();
+			?>
 				</div>
+
 				<div class="slider slider-nav">
-					<div class="d-flex flex-row justify-content-between">
-						<div class="col-4">
-							<img class="" style="width: 75%; height: 100%; object-fit: cover;"src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png">
-						</div>
-						<div class="col-8 d-flex flex-column justify-content-center">
-							<h3><span>Patiëntenspreiding op basis van data1</span></h3>
-							<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p>
-						</div>
-					</div>
-					<div class="d-flex flex-row justify-content-between">
-						<div class="col-4">
-							<img class="" style="width: 75%; height: 100%; object-fit: cover;"src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png">
-						</div>
-						<div class="col-8 d-flex flex-column justify-content-center">
-							<h3><span>Patiëntenspreiding op basis van data1</span></h3>
-							<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p>
-						</div>
-					</div>					<div class="d-flex flex-row justify-content-between">
-						<div class="col-4">
-							<img class="" style="width: 75%; height: 100%; object-fit: cover;"src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png">
-						</div>
-						<div class="col-8 d-flex flex-column justify-content-center">
-							<h3><span>Patiëntenspreiding op basis van data1</span></h3>
-							<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p>
-						</div>
-					</div>					<div class="d-flex flex-row justify-content-between">
-						<div class="col-4">
-							<img class="" style="width: 75%; height: 100%; object-fit: cover;"src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png">
-						</div>
-						<div class="col-8 d-flex flex-column justify-content-center">
-							<h3><span>Patiëntenspreiding op basis van data1</span></h3>
-							<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p>
-						</div>
-					</div>					<div class="d-flex flex-row justify-content-between">
-						<div class="col-4">
-							<img class="" style="width: 75%; height: 100%; object-fit: cover;"src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png">
-						</div>
-						<div class="col-8 d-flex flex-column justify-content-center">
-							<h3><span>Patiëntenspreiding op basis van data1</span></h3>
-							<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p>
-						</div>
-					</div>					<div class="d-flex flex-row justify-content-between">
-						<div class="col-4">
-							<img class="" style="width: 75%; height: 100%; object-fit: cover;"src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png">
-						</div>
-						<div class="col-8 d-flex flex-column justify-content-center">
-							<h3><span>Patiëntenspreiding op basis van data1</span></h3>
-							<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p>
-						</div>
-					</div>					<div class="d-flex flex-row justify-content-between">
-						<div class="col-4">
-							<img class="" style="width: 75%; height: 100%; object-fit: cover;"src="https://allchiefs.nl/wp-content/uploads/2019/04/Lease-plan-logo-website.png">
-						</div>
-						<div class="col-8 d-flex flex-column justify-content-center">
-							<h3><span>Patiëntenspreiding op basis van data1</span></h3>
-							<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen.</p>
-						</div>
-					</div>
+					<?php  
+						$args = array(
+							'post_type'      => 'case',
+							'posts_per_page' => -1,
+							'order' => 'ASC'
+						);
+
+						$loop = new WP_Query( $args );
+						$i;
+						while ( $loop->have_posts() ) : $loop->the_post(); ?>
+						<?php global $post; ?>
+						<?php $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+
+							<div class="d-flex flex-row justify-content-between">
+								<div class="col-4">
+									<img class="" style="width: 75%; height: 100%; object-fit: cover;" src="<?php echo $img[0]; ?>">
+								</div>
+								<div class="col-8 d-flex flex-column justify-content-center">
+									<h3><span><?php echo $post->post_title; ?></span></h3>
+									<p><?php echo $post->post_content; ?></p>
+									<a href="<?php echo get_permalink($post->ID); ?>">Lees verder ></a>
+								</div>
+							</div>
+
+						<?php endwhile;
+
+						wp_reset_query();
+					?>
 
 				</div>
 			</div>
