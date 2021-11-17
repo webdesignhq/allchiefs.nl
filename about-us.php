@@ -52,7 +52,7 @@ get_header();
 		        <?php  
 					$args = array(
 						'post_type'      => 'chief',
-						'posts_per_page' => 10,
+						'posts_per_page' => 15,
 					);
 
 					$loop = new WP_Query( $args );
@@ -65,15 +65,26 @@ get_header();
                         <div class="chief__information p-5">
                             <h3><?php echo $post->post_title; ?></h3>
                             <p><?php echo $post->post_content; ?></p>
-                            <!-- foreach socialmedia link -->
-                            <!-- foreach expertise -->
+							<a href="mailto:<?php echo get_field('email'); ?>"> <?php echo get_field('email'); ?> </a>
+ 							<a href="tel:<?php echo get_field('phonenumber'); ?>"> <?php  echo get_field('phonenumber'); ?> </a>
+							<?php
+								$socials_rows = get_field('social_media');
+									if($socials_rows)
+									{
+										foreach($socials_rows as $row)
+										{
+											$image = $row['icon_img'];
+											echo '<a class="me-3 social-link" href="'. $row['icon-link'] .'"><img src="'. $image .'"></a>';
+										}
+									}
+							?>
                         </div>
                     </div>
 
                     <?php endwhile; ?>
 
                     <?php else: ?>
-                        <p>Sorry, er zijn geen producten gevonden<p>
+                        <p>Sorry, er zijn geen chiefs gevonden<p>
                     <?php endif 
 
                     // wp_reset_query();
