@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Adinda Media
+ * @subpackage HQonline
  * @since 1.0.0
  */
 
