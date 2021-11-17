@@ -39,6 +39,16 @@ $(document).ready(function() {
 	  infinite: true,
 	});	 
 	
+	$('.slidertrip').slick({
+		centerMode: false,
+		slidesToShow: 3.5,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		swipeToSlide: true,
+		infinite: false,
+	});
+	
 
 	$('.case__slider').slick({
 		centerMode: false,
