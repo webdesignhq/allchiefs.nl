@@ -73,11 +73,30 @@ $(document).ready(function() {
 	
 	});
 	
-	$(".menu-toggle").click(function(e) {
-        $(".mobile__menu--container").toggleClass('mobile-active')
+	$(".menu-toggle-btn").click(function(e) {
+		if($(".mobile__menu--container").hasClass('mobile-active')){
+			$(".mobile__menu--container").removeClass('mobile-active');
+			setTimeout(
+				function() 
+				{
+					$(".mobile__menu--container--before").removeClass('mobile-active');
+				}, 300);
+		} else{
+			$(".mobile__menu--container--before").addClass('mobile-active');
+		setTimeout(
+			function() 
+			{
+				$(".mobile__menu--container").addClass('mobile-active');
+			}, 300);
+		}
+		
+        
     });
-	$(".menu-toggle").click(function(e) {
-        $(".menu-toggle").toggleClass('menu__btn--active')
+	$(".menu-toggle-btn").click(function(e) {
+        $(".menu-toggle-btn").toggleClass('menu__btn--active')
+    });
+	$(".menu-toggle-btn").click(function(e) {
+        $(".menu-toggle-btn").toggleClass('open')
     });
 
 	$(".insight").hover(function(e){

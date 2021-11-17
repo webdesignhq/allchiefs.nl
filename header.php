@@ -40,7 +40,12 @@
 					</div> 
 				</div>
 				<div class="col-lg-10 col-6 text-right pe-5" id="menu">
-					<button class="menu-toggle btn"><i class="fas fa-bars"></i></button>
+					<!-- <button class="menu-toggle btn"><i class="fas fa-bars"></i></button> -->
+					<div id="nav-icon1" class="menu-toggle-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 					<nav id="site-navigation" class="main-navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 					</nav>
@@ -54,6 +59,8 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 					</nav>
 				</div>
+			</div>
+			<div class="mobile__menu--container--before d-lg-none d-block">
 			</div>		
 	</header>
 	
