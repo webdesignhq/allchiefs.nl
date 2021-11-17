@@ -18,22 +18,22 @@ get_header();
 	<div class="bannerblocks">
 		<div class="container-xxl">
 			<div class="row">
-				<div class="col-md-3 bannerblock">
+				<div class="col-md-3 col-12 bannerblock">
 					<span>People</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#people" class="read-more">Lees meer</a>
 				</div>
-				<div class="col-md-3 bannerblock">
+				<div class="col-md-3 col-12 bannerblock">
 					<span>Sustainability</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#sustainability" class="read-more">Lees meer</a>
 				</div>
-				<div class="col-md-3 bannerblock">
+				<div class="col-md-3 col-12 bannerblock">
 					<span>Fit for Future</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#fitforfuture" class="read-more">Lees meer</a>
 				</div>
-				<div class="col-md-3 bannerblock">
+				<div class="col-md-3 col-12 bannerblock">
 					<span>Data</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#data" class="read-more">Lees meer</a>
@@ -42,13 +42,13 @@ get_header();
 		</div>
 	</div>
 </div>
-<div id="about" class="mb-5">
+<div id="about" class="mb-lg-5">
 	<div class="container-xxl">
 		<div class="row align-items-center justify-content-between">
 			<div class="col-lg-6 col-lg-offset-1 aboutimg">
 				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_DSC_9271-1-scaled.jpg"/>
 			</div>
-			<div class="col-lg-5">
+			<div class="col-lg-5 mt-4 mt-lg-0">
 				<h2>Sta vandaag klaar voor de dag van morgen</h2>
 				<p class="mt-4">Wij zetten jou aan het stuur van je eigen verandering. Door verbinding maken we impact. Onze Chiefs excelleren op people, customers, performance en ecosystems en vooral waar deze samen komen. Wij zijn scherp en blikverruimend. Voor ons telt alleen het optimale resultaat.</p>
 			</div>
@@ -56,14 +56,14 @@ get_header();
 	</div>
 </div>
 
-<div id="excellences" class="pt-5 pb-5">
+<div id="excellences" class="py-lg-5">
 	<div class="container-xxl excellence__head">
 		<div class="row">
 			<div class="col-md-4">
 			<span class="section__title">Excellences</span>
 				<h3 class="section__subtitle">Hoe we organisaties helpen</h3>
 			</div>
-			<div class="col-md-7 offset-1">
+			<div class="col-md-7 offset-lg-1">
 				<p class="section-p">
 				AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.
 				</p>

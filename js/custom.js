@@ -90,14 +90,14 @@ $(document).ready(function() {
 				function() 
 				{
 					$(".mobile__menu--container--before").removeClass('mobile-active');
-				}, 300);
+				}, 100);
 		} else{
 			$(".mobile__menu--container--before").addClass('mobile-active');
 		setTimeout(
 			function() 
 			{
 				$(".mobile__menu--container").addClass('mobile-active');
-			}, 300);
+			}, 150);
 		}
 		
         

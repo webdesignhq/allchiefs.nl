@@ -5,11 +5,11 @@ get_header(); ?>
 <div id="about-us" class="py-5"  style="background: linear-gradient(-90deg, var(--white-color) 40%, var(--sand-25) 15%, var(--sand-25) 55%);">
     <div class="container-xxl">
         <div class="row py-5">
-        <div class="col-5 d-flex flex-column justify-content-center content-height" >
+        <div class="col-lg-5 col-12 d-flex flex-column justify-content-center content-height" >
                <?php the_content(); ?>
 
             </div>
-            <div class="offset-1 col-6" >
+            <div class="offset-lg-1 col-lg-6 col-12" >
                 <img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_WORKSHOP_DSC_4026-scaled.jpg" alt="" class="h-100" style="width: 100%; object-fit: cover;">
             </div>
         </div>
@@ -22,7 +22,7 @@ get_header(); ?>
             <div class="col-12 d-flex flex-column">
                 <h2 class="text-center">Onze kernwaarden</h2>
             </div>
-            <div class="col-12 d-flex flex-row d-flex">
+            <div class="col-12 d-flex flex-lg-row flex-column d-flex">
 				<?php
 					$args = array(
 					'post-type' => 'kernwaarde',
@@ -38,8 +38,8 @@ get_header(); ?>
 					<div class="position-relative post-container my-lg-5 my-2">
 						<div class="post clickable me-lg-4">
 							<img class="post-image" src="<?php echo $img[0]; ?>" style="width: 100%; height: 200px; object-fit: cover;"/>
-							<p class="post-title mt-4"><?php echo get_the_title(); ?></p>
-							<p class="post-exerpt"><?php echo the_content(); ?></p>
+							<h3 class="post-title mt-lg-4 m-0 mt-2"><?php echo get_the_title(); ?></h3>
+							<p class="post-exerpt m-0"><?php echo the_content(); ?></p>
 							<a class="d-none" href="<?php echo get_permalink();?>">Lees meer</a>
 						</div>
 					</div> 
