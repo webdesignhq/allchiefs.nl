@@ -9,13 +9,13 @@ get_header();
 		90deg, var(--white-color) 45%, var(--sand-25) 20%, var(--sand-25) 50%);">
     <div class="container-xxl">
         <div class="row py-5">
-            <div class="col-6" >
-                <img src="http://localhost/allchiefs.nl/wp-content/uploads/2021/10/ALLCHIEFS_WORKSHOP_DSC_4026.jpg" alt="" class="h-100" style="width: 100%; object-fit: cover;">
-            </div>
-            <div class="col-5 offset-1 d-flex flex-column justify-content-center content-height" >
+        <div class="col-5 offset-1 d-flex flex-column justify-content-center content-height" >
                 <h2>Unieke kijk op consultrancy</h2>
                 <p class="mt-4 col-10">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
 
+            </div>
+            <div class="col-6" >
+                <img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_WORKSHOP_DSC_4026-scaled.jpg" alt="" class="h-100" style="width: 100%; object-fit: cover;">
             </div>
         </div>
     </div>
@@ -24,21 +24,38 @@ get_header();
 <div id="section-2">
     <div class="container-xxl">
         <div class="row">
-                <div class="col-4 d-flex flex-column justify-content-center content-height">
-                    <h2>Wie we zijn</h2>
-                    <p class="mt-4 col-10">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
-                    <a href="./wat-we-doen/" class="btn btn-primary people-big col-5 mt-4">Wat we doen</a>
+                <div class="col-12 d-flex flex-column">
+                    <h2 class="text-center">Onze kernwaarden</h2>
                 </div>
-                <div class="col-6 offset-2">
-                    <div class="h-100">
-                        <img src="http://localhost/allchiefs.nl/wp-content/uploads/2021/10/ALLCHIEFS_WORKSHOP_DSC_4026.jpg" alt="" class="h-100" style="width: 100%; object-fit: cover;">
+                 <div class="col-12 d-flex flex-column">
+                     <?php if (have_posts()) : ?>     
+		        <?php  
+					$args = array(
+						'post_type'      => 'kernwaarde',
+						'posts_per_page' => 4,
+					);
+
+					$loop = new WP_Query( $args );
+
+					while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<?php global $post; ?>
+
+                    <div class="chief flex-column d-flex">
+                            <h3><?php echo $post->post_title; ?></h3>
+                            <p><?php echo $post->post_content; ?></p>
                     </div>
+
+                    <?php endwhile; ?>
+
+                    <?php else: ?>
+                        <p>Sorry, er zijn geen kernwaarden gevonden<p>
+                    <?php endif 
+
+                    // wp_reset_query();
+                    ?>
                     
                 </div>
             </div>
-            <div class="row">
-
-        </div>
     </div>
 </div>
 

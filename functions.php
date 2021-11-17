@@ -154,7 +154,7 @@ function create_post_type_2() {
 }
 add_action('init', 'create_post_type_2');
 
-/* Create post type solutions */
+/* Create post type cases */
 function create_post_type_3() {
 	$supports = array(
         'title',
@@ -193,6 +193,47 @@ function create_post_type_3() {
     register_post_type('case', $args);
 }
 add_action('init', 'create_post_type_3');
+
+
+/* Create post type core values */
+function create_post_type_4() {
+	$supports = array(
+        'title',
+        'editor',
+        'thumbnail',
+        'excerpt',
+        'custom-fields',
+        'revisions',
+        'post-formats',
+    );
+    $labels = array(
+        'name' => 'Kernwaarden',
+        'singular_name' => 'Kernwaarden',
+        'menu_name' => 'Kernwaarden',
+        'name_admin_bar' => 'Kernwaarden',
+        'add_new' => 'Toevoegen',
+        'add_new_item' => 'Voeg kernwaarde toe',
+        'new_item' => 'Case',
+        'edit_item' => 'Bewerk kernwaarde',
+        'view_item' => 'Bekijk kernwaarde',
+        'all_items' => 'Alle kernwaarden',
+        'search_items' => 'Zoek kernwaarden',
+        'not_found' => 'Geen kernwaarden gevonden',
+    );
+    $args = array(
+        'supports' => $supports,
+        'labels' => $labels,
+        'public' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'kernwaarden'),
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-tag',
+        'hierarchical' => false,
+		'taxonomies'  => array( 'category' ),
+    );
+    register_post_type('kernwaarde', $args);
+}
+add_action('init', 'create_post_type_4');
 
 
 /* Optionpage*/
