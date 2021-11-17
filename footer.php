@@ -15,7 +15,7 @@
 <footer>
 	<div id="footer">
 		<div class="container-xxl">
-			<div class="row pt-5 pb-5">
+			<div class="row py-lg-5">
 				<div class="col-md-4 small-12 columns">
 					<div class="custom_logo">
 						<?php 
@@ -26,11 +26,11 @@
 					</div>
 					<span class="slogan">consultancy <br>with a heartbeat</span>
 				</div>
-				<div class="col-md-8 small-12 columns">
+				<div class="col-md-8 small-12 columns mt-5">
 					<h3 class="pb-3">Waar zijn we te vinden?</h3>
 					<div class="container p-0">
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-6">
 								<ul>
 									<li><strong>AllChiefs HQ</strong></li>
 								</ul>
@@ -45,7 +45,7 @@
 									<li><a href="mailto:info@allchiefs.nl">info@allchiefs.nl</a></li>
 								</ul>
 							</div>
-							<div class="col-md-6">
+							<div class="col-6">
 							<ul>
 								<li><strong>AllChiefs HUB</strong></li>
 							</ul>
@@ -72,7 +72,7 @@
 	<div id="copyright">
 		<div class="row">
 			<div class="col-md-12 columns">
-				<p class="text-white">Copyright &copy; - <?php echo date('Y') ?></p>
+				<p class="text-white text-center">Copyright &copy; - <?php echo date('Y') ?></p>
 			</div>
 		</div>
 	</div>

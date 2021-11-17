@@ -1486,4 +1486,12 @@ color: var(--primary-color);
 		transform: rotate(-135deg);
 	  }
 
+	  #footer{
+		  padding: 50px 0!important;
+	  }
+	  #footer .custom_logo{
+		  margin-bottom: 15px!important;
+		  width: 50%!important;
+	  }
+
 }

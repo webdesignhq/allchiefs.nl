@@ -62,8 +62,8 @@ get_header();
 					<div class="position-relative post-container my-lg-5 my-2">
 						<div class="post clickable me-lg-4">
 							<img class="post-image" src="<?php echo $backgroundImg[0]; ?>" style="width: 100%; height: 200px; object-fit: cover;"></img>
-							<p class="post-title mt-4"><?php echo get_the_title(); ?></p>
-							<p class="post-exerpt"><?php echo get_the_content(); ?></p>
+							<h3 class="post-title mt-lg-4 m-0 mt-2"><?php echo get_the_title(); ?></h3>
+							<p class="post-exerpt m-0"><?php echo the_content(); ?></p>
 							<a class="d-none" href="<?php echo get_permalink();?>"> </a>
 						</div>
 					</div> 
