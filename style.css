@@ -256,10 +256,10 @@ header {
 #banner {
 	height: 90vh;
 	width: 100%;
-	background: url('https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/10/test.jpg');
+	background: url('https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_WORKSHOP_DSC_4044-scaled.jpg');
 	background-size: cover;
 	position: relative;
-	background-position: 100% 100% ;
+	background-position: 100% 57%;
 }
 
 #bannerindex {

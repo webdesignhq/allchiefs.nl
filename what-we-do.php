@@ -12,7 +12,7 @@ get_header();
 				<a href="#people" class="btn btn-primary people-big">People</a> <a href="#sustainability" class="btn btn-primary sustainability-big">Sustainability</a> <a href="#fitforfuture" class="btn btn-primary">Fit for Future</a> <a href="#data" class="btn btn-primary">Data</a>
 			</div>
 			<div class="col-md-6 whatwedoimg">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg"/>
+				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_WORKSHOP_DSC_4403-1-scaled.jpg"/>
 			</div>
 		</div>
 	</div>

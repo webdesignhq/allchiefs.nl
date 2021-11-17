@@ -9,7 +9,7 @@ get_header();
 	<div class="container-xxl">
 		<div class="row align-items-center justify-content-between">
 		<div class="col-md-6 whatwedoimg">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg"/>
+				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_DSC_9377-scaled.jpg"/>
 			</div>
 			<div class="col-md-5">
 				<h2><?php echo get_the_title(); ?></h2>

@@ -23,7 +23,7 @@ get_header();
 					<a href="#" class="btn btn-primary mt-4">Zoek een speciek persoon</a>
 			</div>
 			<div class="col-md-6 contactimg">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg"/>
+				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_DSC_9018-1-scaled.jpg"/>
 			</div>
 		</div>
 	</div>
@@ -33,7 +33,7 @@ get_header();
 	<div class="container-xxl">
 		<div class="col-12 my-5 d-lg-flex d-block flex-row">
 			<div class="p-5 contactblock d-flex flex-column pb-4">
-				<img class="contactblock-inner pb-4" style="width:100%;" src="http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/rotterdam-top-view.jpg">
+				<img class="contactblock-inner pb-4" style="width:100%;" src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_DSC_8951-scaled.jpg">
 				<h3>Allchiefs HQ</h3>
 				<p>Groot Handelsgebouw<br>
 				Unit: A3.202<br>
@@ -42,7 +42,7 @@ get_header();
 				
 			</div>
 			<div class="p-5 contactblock">
-					<img class="contactblock-inner d-flex flex-column pb-4" style="width:100%;" src="http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/rotterdam-top-view.jpg">
+					<img class="contactblock-inner d-flex flex-column pb-4" style="width:100%;" src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_DSC_8951-scaled.jpg">
 				<h3>Allchiefs HUB</h3>
 				<p>Groot Handelsgebouw<br>
 				Unit: A3.202<br>
@@ -50,7 +50,7 @@ get_header();
 				3013 AK Rotterdam</p>
 			</div>
 			<div class="p-5 contactblock">
-				<img class="contactblock-inner d-flex flex-column  pb-4" style="width:100%;" src="http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/rotterdam-top-view.jpg">
+				<img class="contactblock-inner d-flex flex-column  pb-4" style="width:100%;" src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_DSC_8951-scaled.jpg">
 				<h3>Allchiefs HUB</h3>
 				<p>Groot Handelsgebouw<br>
 				Unit: A3.202<br>

@@ -46,7 +46,7 @@ get_header();
 	<div class="container-xxl">
 		<div class="row align-items-center justify-content-between">
 			<div class="col-lg-6 col-lg-offset-1 aboutimg">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg"/>
+				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_DSC_9271-1-scaled.jpg"/>
 			</div>
 			<div class="col-lg-5">
 				<h2>Sta vandaag klaar voor de dag van morgen</h2>
@@ -175,7 +175,7 @@ get_header();
 				<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
 			</div>
 			<div class="col-lg-6 whoweareimg">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/rotterdam-top-view.jpg"/>
+				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/10/ALLCHIEFS_WORKSHOP_DSC_4026.jpg"/>
 			</div>
 		</div>
 	</div>
