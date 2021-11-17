@@ -1062,7 +1062,7 @@ header {
   /* right: 105%; */
   background-color: var(--white-color);
   position: fixed;
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 
 
@@ -1236,11 +1236,14 @@ left: 0;
 		display: block;
 		z-index: 10;
 		height: auto;
-		float: none;
+		float: right;
 		color: white;
 		padding-left:10px;
 		border: none;
 		height: 50px;
+	}
+	.menu-toggle:hover{
+		color: var(--primary-color);
 	}
 	.has-banner .main-navigation {
 		background-color: #3C3C3C;
@@ -1249,17 +1252,11 @@ left: 0;
 	.has-banner .main-navigation li {
 		width: 100%;
 		border: 0;
-		padding: 10px 0;
-		
-	}
-	.main-navigation li:hover {
-		background: transparent !important;
+		padding: 5px 25px;
+		font-weight: 400;
 	}
 	.main-navigation li:first-child {
 		padding-top: 15px;
-	}
-	.main-navigation ul ul li:hover {
-		background-color: transparent;
 	}
 	.main-navigation ul {
 		display: none;
@@ -1271,5 +1268,88 @@ left: 0;
 		border: none;
 		background: transparent;
 		box-shadow: none;
-	}	
+	}
+
+	.mobile__menu--container nav ul li{
+		padding: 5px 50px;
+	}
+	#bannerindex{
+		min-height: 450px;
+	}
+	#bannerindex .bannerindexcontent{
+		width: 100%;
+	}
+	.container-xxl{
+		padding: 0 25px;
+	}
+	.mobile__menu--container .main-navigation ul{
+		margin-left: 0;
+	}
+	.header .container-fluid{
+		z-index: 1001;
+		position: relative;
+	}
+	.mobile__menu--container .current-menu-item {
+		background-color: var(--primary-color)!important;
+	}
+	.mobile__menu--container .current-menu-item a{
+		color: var(--white-color)!important;
+	}
+	.menu-item:hover{
+		background-color: var(--primary-color);
+	}
+	.menu-item:hover a{
+		color: var(--white-color)!important;
+	}
+	.menu__btn--active{
+		color: var(--primary-color);
+	}
+
+	/* .sticky-header .menu-toggle{
+		color: var(--primary-color);
+	}
+	.sticky-header .main-navigation a{
+		color: var(--primary-color)!important;
+	}
+
+	.sticky-header .main-navigation .current-menu-item a{
+		color: var(--white-color)!important;
+	} */
+
+	/* about us */
+	#about-us{
+		padding-top: 0!important;
+		padding-bottom: 0!important;
+	}
+	#section-2{
+		margin-top: 0;
+	}
+	.chief{
+		width: 48%;
+		margin: 10px 0;
+	}
+
+	/* Cases */
+	.post-container{
+		max-width: 100%!important;
+	}
+	.post-title{
+		font-size: 20px;
+	}
+	.post-exerpt{
+		font-size: 16px;
+	}
+	.cat-list li:first-child a{
+		padding-left: 0!important;
+	}
+	.cat-list li a{
+		padding: 15px!important;
+		padding-left: 0!important;
+	}
+	#cases{
+		margin-top: 25px;
+	}
+	#single__header .bannerindexcontent{
+		left: 0!important;
+	}
 }

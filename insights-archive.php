@@ -9,7 +9,7 @@ get_header();
 	<div id="filters">
 		<div class="container-xxl">
 			<div class="row">
-				<div class="col-4">
+				<div class="col-lg-4 col-12">
 					<span>Per expertise</span>
 					<?php
 						$args = array(
@@ -59,8 +59,8 @@ get_header();
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<?php global $post; ?>
 					<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-					<div class="position-relative post-container my-5">
-						<div class="post clickable me-4">
+					<div class="position-relative post-container my-lg-5 my-2">
+						<div class="post clickable me-lg-4">
 							<img class="post-image" src="<?php echo $backgroundImg[0]; ?>" style="width: 100%; height: 200px; object-fit: cover;"></img>
 							<p class="post-title mt-4"><?php echo get_the_title(); ?></p>
 							<p class="post-exerpt"><?php echo get_the_content(); ?></p>

@@ -30,7 +30,7 @@
 	<header class="header">
 			<div class="container-fluid">
 			<div class="row align-items-center">
-				<div class="col-lg-2 col-sm-6 text-center">
+				<div class="col-lg-2 col-6 text-center">
 					<div class="custom_logo">
 						<?php 
 							if ( function_exists( 'the_custom_logo' ) ) {
@@ -39,7 +39,7 @@
 							?>
 					</div> 
 				</div>
-				<div class="col-lg-10 col-sm-6 text-right pe-5" id="menu">
+				<div class="col-lg-10 col-6 text-right pe-5" id="menu">
 					<button class="menu-toggle btn"><i class="fas fa-bars"></i></button>
 					<nav id="site-navigation" class="main-navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

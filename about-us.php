@@ -5,14 +5,14 @@ Template Name: About us
 
 get_header();
 ?>
-<div id="about-us" class="py-5"  style="background: linear-gradient(
+<div id="about-us" class="py-lg-5 py-0"  style="background: linear-gradient(
 		90deg, var(--white-color) 45%, var(--sand-25) 20%, var(--sand-25) 50%);">
     <div class="container-xxl">
-        <div class="row py-5">
-            <div class="col-6" >
+        <div class="row pt-5 py-lg-5">
+            <div class="col-12 col-lg-6" >
                 <img src="http://localhost/allchiefs.nl/wp-content/uploads/2021/10/ALLCHIEFS_WORKSHOP_DSC_4026.jpg" alt="" class="h-100" style="width: 100%; object-fit: cover;">
             </div>
-            <div class="col-5 offset-1 d-flex flex-column justify-content-center content-height" >
+            <div class="col-12 col-lg-5 offset-lg-1 d-flex flex-column justify-content-center content-height" >
                 <h2>Unieke kijk op consultrancy</h2>
                 <p class="mt-4 col-10">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
 
@@ -24,12 +24,12 @@ get_header();
 <div id="section-2">
     <div class="container-xxl">
         <div class="row">
-                <div class="col-4 d-flex flex-column justify-content-center content-height">
+                <div class="col-12 col-lg-4 d-flex flex-column justify-content-center content-height">
                     <h2>Wie we zijn</h2>
                     <p class="mt-4 col-10">AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
                     <a href="./wat-we-doen/" class="btn btn-primary people-big col-5 mt-4">Wat we doen</a>
                 </div>
-                <div class="col-6 offset-2">
+                <div class="col-12 col-lg-6 offset-lg-2 ">
                     <div class="h-100">
                         <img src="http://localhost/allchiefs.nl/wp-content/uploads/2021/10/ALLCHIEFS_WORKSHOP_DSC_4026.jpg" alt="" class="h-100" style="width: 100%; object-fit: cover;">
                     </div>
@@ -52,7 +52,7 @@ get_header();
 		        <?php  
 					$args = array(
 						'post_type'      => 'chief',
-						'posts_per_page' => 10,
+						'posts_per_page' => -1,
 					);
 
 					$loop = new WP_Query( $args );

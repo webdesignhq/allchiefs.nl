@@ -6,7 +6,7 @@ get_header();
 <div id="contact" class="pt-5 pb-5 mb-5">
 	<div class="container-xxl">
 		<div class="col-12 d-lg-flex d-block flex-row align-items-center ">
-			<div class="d-flex flex-column p-5">
+			<div class="d-flex flex-column p-lg-5">
 				<h2>Verruim je blik</h2>
 				<p><?php the_content(); ?></p>
 				<?php
@@ -22,14 +22,14 @@ get_header();
 					?>
 					<a href="#" class="btn btn-primary mt-4">Zoek een speciek persoon</a>
 			</div>
-			<div class="col-md-6 contactimg">
+			<div class="col-md-6 contactimg mt-5 mt-lg-0">
 				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_DSC_9018-1-scaled.jpg"/>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div id="locations" class="pt-5 pb-5">
+<div id="locations" class="py-lg-5 py-0">
 	<div class="container-xxl">
 		<div class="col-12 my-5 d-lg-flex d-block flex-row">
 			<div class="p-5 contactblock d-flex flex-column pb-4">

@@ -76,6 +76,9 @@ $(document).ready(function() {
 	$(".menu-toggle").click(function(e) {
         $(".mobile__menu--container").toggleClass('mobile-active')
     });
+	$(".menu-toggle").click(function(e) {
+        $(".menu-toggle").toggleClass('menu__btn--active')
+    });
 
 	$(".insight").hover(function(e){
 		let target = e.target.childNodes[1].innerHTML;
