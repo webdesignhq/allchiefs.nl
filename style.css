@@ -455,6 +455,7 @@ header {
 	transition: all .2s ease-in;
 	height: 400px;
 	filter: grayscale(100%);
+	opacity: 0.4;
 }
 
 .slider-nav .slick-list{
@@ -469,6 +470,7 @@ header {
 	transform: scale(1.2);
 	transform-origin: center;
 	z-index: 15;
+	opacity: 1;
 }
 
 .slider-nav .slick-current::before, .slider-nav .slick-current::after{
@@ -501,6 +503,18 @@ header {
 
 .slick-current .slider-logo {
 	filter: grayscale(0%);
+}
+
+.slick-current .slidertext {
+	color: #fff !important;
+}
+
+.slick-current .slidertitle {
+	color: #fff !important;
+}
+
+.slick-current .sliderlink {
+	color: #fff !important;
 }
 
 /* Who we are page */

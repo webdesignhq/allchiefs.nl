@@ -152,9 +152,9 @@ get_header();
 									<img class="" style="width: 75%; height: 100%; object-fit: cover;" src="<?php echo $img[0]; ?>">
 								</div>
 								<div class="col-8 d-flex flex-column justify-content-center">
-									<h3><span><?php echo $post->post_title; ?></span></h3>
-									<p><?php echo $post->post_content; ?></p>
-									<a href="<?php echo get_permalink($post->ID); ?>">Lees verder ></a>
+									<h3 class="slidertitle"><span><?php echo $post->post_title; ?></span></h3>
+									<p class="slidertext"><?php echo $post->post_content; ?></p>
+									<a class="sliderlink" href="<?php echo get_permalink($post->ID); ?>">Lees verder ></a>
 								</div>
 							</div>
 
