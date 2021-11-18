@@ -1299,6 +1299,7 @@ color: var(--primary-color);
 	}
 	#banner .bannerblock:first-child{
 		display: block;
+		border: unset;
 	}
 	#banner .bannerblocks{
 		padding: 33px 0;
