@@ -91,7 +91,7 @@ get_header();
 							<div class="col-md-4">
 								<img src="<?php echo $icon; ?>" class="excellence__icon"/>
 							</div>
-							<div class="col-md-7 offset-1">
+							<div class="col-md-7 offset-lg-1 mt-lg-0 mt-4">
 								<h4><?php echo $post->post_title; ?></h4>
 								<p><?php echo get_field('excellence_description', $post->ID); ?></p>
 								<a href="<?php echo get_permalink($post->ID); ?>" class="btn btn-primary" style="background-color:<?php echo get_field('color_excellence', $post->ID); ?>;"><?php echo $post->post_title; ?></a>
@@ -198,7 +198,7 @@ get_header();
 				<?php global $post; ?>
 				<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 				<div class="col-md-3 position-relative insight-container">
-					<div class="insight clickable" style="height: 600px; background-image: url(''); background-size: cover;">
+					<div class="insight clickable" style="height: 600px; background-image: url('<?php echo $backgroundImg[0]; ?>'); background-size: cover;">
 						<p class="insight-image"><?php echo $backgroundImg[0]; ?></p>
 						<p class="insight-title"><?php echo get_the_title(); ?></p>
 						<p class="insight-exerpt"><?php echo get_the_content(); ?></p>

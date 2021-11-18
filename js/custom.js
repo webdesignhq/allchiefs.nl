@@ -115,9 +115,30 @@ $(document).ready(function() {
 				$(".mobile__menu--container").addClass('mobile-active');
 			}, 150);
 		}
-		
-        
     });
+
+	$(".menu-item a").click(function(e) {
+		e.preventDefault();
+		if($(".mobile__menu--container").hasClass('mobile-active')){
+			$(".mobile__menu--container").removeClass('mobile-active');
+			setTimeout(
+				function() 
+				{
+					$(".mobile__menu--container--before").removeClass('mobile-active');
+				}, 100);
+			let link = $(this).attr('href');	
+			console.log(link);
+			window.location.href= link;	
+		} else{
+			$(".mobile__menu--container--before").addClass('mobile-active');
+		setTimeout(
+			function() 
+			{
+				$(".mobile__menu--container").addClass('mobile-active');
+			}, 150);
+		}
+    });
+
 	$(".menu-toggle-btn").click(function(e) {
         $(".menu-toggle-btn").toggleClass('menu__btn--active')
     });
@@ -127,7 +148,6 @@ $(document).ready(function() {
 
 	$(".insight").hover(function(e){
 		let target = e.target.childNodes[1].innerHTML;
-		console.log(target);
 		$('#insights').css('background', `url(' ${ target } ') `);
 	}, function(e){
 
