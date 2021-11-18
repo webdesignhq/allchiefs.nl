@@ -101,7 +101,7 @@ get_header(); ?>
                     <div class="chief" style="background-image: url('<?php echo $backgroundImg[0]; ?>'); background-size: cover;">
                         <div class="chief__information p-5">
                             <h3><?php echo $post->post_title; ?></h3>
-                            <p><?php echo $post->post_content; ?></p>
+                            <p><?php echo $post->post_excerpt; ?></p>
 							<a href="mailto:<?php echo get_field('email'); ?>"> <?php echo get_field('email'); ?> </a>
  							<a href="tel:<?php echo get_field('phonenumber'); ?>"> <?php  echo get_field('phonenumber'); ?> </a>
 							<?php

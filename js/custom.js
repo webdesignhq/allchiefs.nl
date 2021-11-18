@@ -172,6 +172,76 @@ $(document).ready(function() {
 		  }
 		})
 	});
+	
+	$(function() {
+
+  var boxSustainability = new TimelineMax();
+   
+	boxSustainability.from('.box-sustainability',1,{
+		x: 150
+	})  
+  
+  var boxFitforfuture = new TimelineMax();
+   
+	boxFitforfuture.from('.box-fit-for-future',1,{
+		x: 150
+	})  
+	
+ var boxData = new TimelineMax();
+   
+	boxData.from('.box-data',1,{
+		x: 150
+	})  
+  
+
+	var controller = new ScrollMagic.Controller();
+
+	var pinPeopleBox = new ScrollMagic.Scene({
+				triggerElement: '#sec-people',
+				triggerHook: .1
+			})
+			.setPin('.box-people')
+		.addIndicators({
+		  name: 'people box'
+		})
+			.addTo(controller);
+
+	var pinSustainabiltyBox = new ScrollMagic.Scene({
+				triggerElement: '#sec-sustainability',
+				triggerHook: .1
+			})
+			.setPin('.box-sustainability')
+		.addIndicators({
+		  name: 'sustainability box'
+		})
+		.setTween(boxSustainability)
+			.addTo(controller);
+
+
+	var pinFitForfutureBox = new ScrollMagic.Scene({
+				triggerElement: '#sec-fit-for-future',
+				triggerHook: .1
+			})
+			.setPin('.box-fit-for-future')
+		.addIndicators({
+		  name: 'fitforfuture box'
+		})
+		.setTween(boxFitforfuture)
+			.addTo(controller);
+	
+	var pinData = new ScrollMagic.Scene({
+				triggerElement: '#sec-data',
+				triggerHook: .1
+			})
+			.setPin('.box-data')
+		.addIndicators({
+		  name: 'data box'
+		})
+		.setTween(boxData)
+			.addTo(controller);
+
+	});
+
 
 	$('.nav-prev').on('mouseover', function() {
 		$('.prev-title').addClass('activePostNavPrev');

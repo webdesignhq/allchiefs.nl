@@ -76,7 +76,9 @@ get_header();
 					'post_type'      => 'page',
 					'posts_per_page' => -1,
 					'post_parent'	 => 10,
-					'order' => 'ASC'
+					'orderby' => 'publish_date',
+   					 'order' => 'DESC'
+				
 				);
 
 				$loop = new WP_Query( $args );
