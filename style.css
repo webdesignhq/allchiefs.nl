@@ -1329,7 +1329,6 @@ color: var(--primary-color);
 		position: absolute;
 		top: 100%;
 		left: 30%;
-
 	}
 	.menu-item:hover{
 		background-color: var(--primary-color);
@@ -1365,7 +1364,16 @@ color: var(--primary-color);
 		transition: all .25s ease-in-out;
 		left: 110%;
 	}
-
+	.slider-nav .slick-current {
+		transform: scale(1)!important;
+	}
+	.slider-nav .slick-slide{
+		height: auto;
+		padding: 33px;
+	}
+	.slider-nav .slick-slide div img{
+		width: 100%!important;
+	}
 	.sticky-header #nav-icon1 span{
 		background-color: var(--primary-color)!important;
 	}

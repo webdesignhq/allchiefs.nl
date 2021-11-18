@@ -147,11 +147,11 @@ get_header();
 						<?php global $post; ?>
 						<?php $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 
-							<div class="d-flex flex-row justify-content-between">
-								<div class="col-4">
+							<div class="d-flex flex-lg-row flex-column justify-content-between">
+								<div class="col-lg-4 col-12">
 									<img class="" style="width: 75%; height: 100%; object-fit: cover;" src="<?php echo $img[0]; ?>">
 								</div>
-								<div class="col-8 d-flex flex-column justify-content-center">
+								<div class="col-lg-8 col-12 d-flex flex-column justify-content-center mt-lg-0 mt-3">
 									<h3 class="slidertitle"><span><?php echo $post->post_title; ?></span></h3>
 									<p class="slidertext"><?php echo $post->post_content; ?></p>
 									<a class="sliderlink" href="<?php echo get_permalink($post->ID); ?>">Lees verder ></a>

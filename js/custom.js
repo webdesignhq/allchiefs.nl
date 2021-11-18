@@ -21,10 +21,18 @@ $(document).ready(function() {
 		asNavFor: '.slider-nav',
 		variableWidth: true,
 		dots: false,
-		arrows: true,
+		arrows: false,
 		focusOnSelect: true,
 		swipeToSlide: true,
 		infinite: true,
+		responsive: [
+			{
+			  breakpoint: 1024,
+			  settings: {
+				slidesToShow: 1,
+			  }
+			}
+		]
 	});
 	$('.slider-nav').slick({
 	  slidesToShow: 1,
@@ -33,10 +41,18 @@ $(document).ready(function() {
 	  centerPadding: '25%',
 	  asNavFor: '.slider-for',
 	  dots: false,
-	  arrows: true,
+	  arrows: false,
 	  focusOnSelect: true,
 	  swipeToSlide: true,
 	  infinite: true,
+	  responsive: [
+		{
+		  breakpoint: 1024,
+		  settings: {
+			centerPadding: '10%;'
+		  }
+		}
+	]
 	});	 
 	
 	$('.slidertrip').slick({
