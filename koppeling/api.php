@@ -2,76 +2,83 @@
     ini_set ( 'max_execution_time', 1200); 
     set_time_limit(1200);
 
-    require_once("https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/public_html/wp-load.php");
-    require_once(ABSPATH . 'wp-admin/includes/media.php');
-    require_once(ABSPATH . 'wp-admin/includes/file.php');
-    require_once(ABSPATH . 'wp-admin/includes/image.php');
-    $articles = [];
+    require_once("/home/allchiefs/domains/allchiefs.nl/public_html/wp-load.php");
 
-    function requestAPI($binding, $api_route, $method) {
+    function requestAPI($companyid, $api_route, $method) {
+		
         $curl = curl_init();
 
-        $configString = file_get_contents("../static/config.json");
-        $config = json_decode($configString, true);
+        //$configString = file_get_contents("../static/config.json");
+        //$config = json_decode($configString, true);
 
-        $api_key = $config['api_key'];
+        // $api_key = $config['api_key'];
+	 	$api_key = "Bearer eFFmc1ZJTzRVM2l1bnkyZFRncklpQT09";
     
-        $requestUrl = "https://api.recruitee.com/c/71676/offers";
+        $requestUrl = "https://allchiefs.recruitee.com/api/" . $api_route;
 
         // Sets the URL and corrosponding header data
         curl_setopt($curl, CURLOPT_URL, $requestUrl);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-            'Authorization: '. $api_key
+            'Authorization: '. $api_key,
+			'Accept: application/'. $method,
         ));
         
 
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        
+       
         $results = curl_exec($curl);
 
         curl_close($curl);
 
         if(!$results) { echo 'No results!'; }
-
         return $results;
     }
 
-    function getOffers($binding, $company) {
-        libxml_use_internal_errors(true);
-
-        $xml = requestAPI($binding, "exportdefinition?definitionHeaderCode=". $company ."&forceUpdate=true", "xml");
-        $xml = simplexml_load_string($xml);
-
-        foreach( libxml_get_errors() as $error ) {
-            print_r($error);
-        }
-        return $xml;
+    function getOffers($companyid) {
+	
+        $json = requestAPI($companyid, "offers/", "json");
+			
+        return $json;
     }
 	
     function createVacancy($vacancy) {
-        $creationStatus = true;
 
-        if($price <= 0) $creationStatus = false;
-        if($articleEndDate != '') {
-            $currentDate = time();
-            $date = strtotime($articleEndDate);
-
-            if($currentDate > $date) {
-                $creationStatus = false;
-            }
-        }
-        if($creationStatus) {
-            $articleCatIDs = [];
+        $creationStatus = true; 
+		
+		if($creationStatus) {
+           
             $post_id = wp_insert_post(
                 array(
                     'post_title' => strval($vacancy),
-                    'post_content' => $description ? $description : '',
                     'post_type' => 'vacature',
-                    'post_status' => 'publish'
+                    'post_status' => 'publish',
                 )
             );
+			echo 'Vacature aangemaakt met het id: ' .  $post_id;
     
-            $thedata = Array();
-        }
+		 }
     }
+	
+	    /**
+     * Runs the API job
+     */
+    
+    function runJob($companyid) {
+			
+		$offers = json_decode(getOffers($companyid));
+		
+		$args = array( 'post_type' => 'vacature' ,'posts_per_page' => -1);
+		$vacancies = get_posts( $args );
+
+		$i = 0;
+		foreach ($offers as $offer) {
+			$productName = $offer[$i]->title;
+			createVacancy($productName);
+
+			$i++;                
+			sleep(0.1);
+		}   
+    }
+
+	runJob("71676");
 ?>
