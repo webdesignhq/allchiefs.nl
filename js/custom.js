@@ -201,9 +201,7 @@ $(document).ready(function() {
 				triggerHook: .1
 			})
 			.setPin('.box-people')
-		.addIndicators({
-		  name: 'people box'
-		})
+		
 			.addTo(controller);
 
 	var pinSustainabiltyBox = new ScrollMagic.Scene({
@@ -211,9 +209,7 @@ $(document).ready(function() {
 				triggerHook: .1
 			})
 			.setPin('.box-sustainability')
-		.addIndicators({
-		  name: 'sustainability box'
-		})
+		
 		.setTween(boxSustainability)
 			.addTo(controller);
 
@@ -223,9 +219,7 @@ $(document).ready(function() {
 				triggerHook: .1
 			})
 			.setPin('.box-fit-for-future')
-		.addIndicators({
-		  name: 'fitforfuture box'
-		})
+		
 		.setTween(boxFitforfuture)
 			.addTo(controller);
 	
@@ -234,9 +228,7 @@ $(document).ready(function() {
 				triggerHook: .1
 			})
 			.setPin('.box-data')
-		.addIndicators({
-		  name: 'data box'
-		})
+		
 		.setTween(boxData)
 			.addTo(controller);
 

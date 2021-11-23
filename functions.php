@@ -236,6 +236,47 @@ function create_post_type_4() {
 add_action('init', 'create_post_type_4');
 
 
+
+/* Create post type core values */
+function create_post_type_5() {
+	$supports = array(
+        'title',
+        'editor',
+        'thumbnail',
+        'excerpt',
+        'custom-fields',
+        'revisions',
+        'post-formats',
+    );
+    $labels = array(
+        'name' => 'Vacatures',
+        'singular_name' => 'Vacatures',
+        'menu_name' => 'Vacatures',
+        'name_admin_bar' => 'Vacatures',
+        'add_new' => 'Toevoegen',
+        'add_new_item' => 'Voeg vacature toe',
+        'new_item' => 'Case',
+        'edit_item' => 'Bewerk vacature',
+        'view_item' => 'Bekijk vacature',
+        'all_items' => 'Alle vacatures',
+        'search_items' => 'Zoek vacatures',
+        'not_found' => 'Geen vacatures gevonden',
+    );
+    $args = array(
+        'supports' => $supports,
+        'labels' => $labels,
+        'public' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'vacatures'),
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-tag',
+        'hierarchical' => false,
+		'taxonomies'  => array( 'category' ),
+    );
+    register_post_type('vacature', $args);
+}
+add_action('init', 'create_post_type_5');
+
 /* Optionpage*/
 
 if( function_exists('acf_add_options_page') ) {

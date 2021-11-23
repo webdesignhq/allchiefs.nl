@@ -96,9 +96,9 @@ get_header(); ?>
 
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<?php global $post; ?>
-					<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
+					<?php $backgroundImg = get_field('chief_img'); ?>
 
-                    <div class="chief" style="background-image: url('<?php echo $backgroundImg[0]; ?>'); background-size: cover;">
+                    <div class="chief" style="background-image: url('<?php echo $backgroundImg; ?>'); background-size: cover;">
                         <div class="chief__information p-5">
                             <h3><?php echo $post->post_title; ?></h3>
                             <p><?php echo $post->post_excerpt; ?></p>
@@ -124,6 +124,7 @@ get_header(); ?>
 									}
 									echo trim( $output, $separator );
 							}?>
+							  <p><a href="<?php echo $post->guid; ?>">Lees meer</a></p>
                         </div>
                     </div>
                     <?php endwhile; ?>
