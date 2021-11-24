@@ -10,7 +10,9 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
-		arrows: true
+		arrows: true,
+		prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="fas fa-long-arrow-alt-right"></i></button>',
 	});
 
 	 $('.slider-for').slick({
@@ -153,18 +155,22 @@ $(document).ready(function() {
 
 	});
 
+	
+	let type = '';
+	
 	$('.cat-list_item').on('click', function() {
 		$('.cat-list_item').removeClass('active');
 		$(this).addClass('active');
-	  
+	  	type = $(this).data('type');
+		
 		$.ajax({
 		  type: 'POST',
-		  url: '/allchiefs.nl/wp-admin/admin-ajax.php',
+		  url: '/~allchiefs/wp-admin/admin-ajax.php',
 		  dataType: 'html',
 		  data: {
 			action: 'filter_projects',
 			category: $(this).data('slug'),
-			type: $(this).data('type'),
+			type: type,
 			content: $(this).data('content'),
 		  },
 		  success: function(res) {
@@ -178,19 +184,19 @@ $(document).ready(function() {
   var boxSustainability = new TimelineMax();
    
 	boxSustainability.from('.box-sustainability',1,{
-		x: 150
+// 		x: 150
 	})  
   
   var boxFitforfuture = new TimelineMax();
    
 	boxFitforfuture.from('.box-fit-for-future',1,{
-		x: 150
+// 		x: 150
 	})  
 	
  var boxData = new TimelineMax();
    
 	boxData.from('.box-data',1,{
-		x: 150
+// 		x: 150
 	})  
   
 

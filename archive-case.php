@@ -26,6 +26,12 @@ get_header();
 				<ul class="cat-list">
 						<?php 
 						foreach ($categories as $category) {
+							if ($category->category_parent > 0){
+								
+							}else{
+								if($category->slug === 'chiefs'){
+									
+								} else{
 						?>
 							<li>
 								<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
@@ -33,7 +39,7 @@ get_header();
 								</a>
 						 	</li>
 							<?php
-						}
+						}}}
 						?>
 				</ul>	
 					
@@ -62,7 +68,7 @@ get_header();
 
 	<div id="cases">
 		<div class="container-xxl">
-			<div class="row flex-wrap justify-content-between" id="response">
+			<div class="row flex-wrap justify-content-start" id="response">
 			<?php if (have_posts()) : ?>     
 		<?php  
 					$args = array(
@@ -78,16 +84,16 @@ get_header();
 					<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 					<div class="position-relative post-container my-lg-5 my-2">
 						<div class="post clickable me-lg-4">
-							<img class="post-image" src="<?php echo $backgroundImg[0]; ?>" style="width: 100%; height: 200px; object-fit: cover;"></img>
-							<h3 class="post-title mt-lg-4 m-0 mt-2"><?php echo get_the_title(); ?></h3>
-							<p class="post-exerpt m-0"><?php echo the_content(); ?></p>
+							<img class="post-image" src="<?php echo $backgroundImg[0]; ?>" style="width: 100%; height: 200px; object-fit: cover;" />
+							<p class="post-title mt-4"><?php echo get_the_title(); ?></p>
+							<p class="post-exerpt"><?php echo get_the_content(); ?></p>
 							<a class="d-none" href="<?php echo get_permalink();?>"> </a>
 						</div>
 					</div> 
 					<?php endwhile; ?>
 
 					<?php else: ?>
-						<p>Sorry, er zijn geen producten gevonden<p>
+						<p>Sorry, er zijn geen producten gevonden</p>
 					<?php endif 
 
 					// wp_reset_query();
