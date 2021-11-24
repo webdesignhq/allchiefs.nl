@@ -367,7 +367,7 @@ header {
 }
 
 #about .aboutimg:after {
-	content: url('http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/allchiefs-corner-left.png');
+	content: url('https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/allchiefs-corner-left.png');
 	position: absolute;
 	top: -70px;
     left: -60px;
@@ -596,7 +596,7 @@ header {
 }
 
 #locations .contactblock:after {
-	content: url('http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/allchiefs-corner-left.png');
+	content: url('https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/allchiefs-corner-left.png');
     position: absolute;
     top: -10px;
     left: -10px;
@@ -1185,7 +1185,7 @@ header {
 }
 
 #footer::after {
-	content: url('http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/allchiefs-corner-right.png');
+	content: url('https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/allchiefs-corner-right.png');
 	position: absolute;
 	top: -70px;
     right: 25px;	
@@ -1237,6 +1237,7 @@ header {
 	width: 100%;
 	z-index: 999;
 	text-align: right;
+	padding-right: 30px;
 }
 .main-navigation ul {
 	list-style: none;
@@ -1288,8 +1289,8 @@ header {
 }
 .main-navigation ul ul a {
 	width: 200px;
-	color: #525252;
-	text-transform: uppercase;
+	color: var(--primary-color);
+	font-size: 16px;
 }
 
 .main-navigation ul ul:hover {
@@ -1303,15 +1304,8 @@ header {
 .main-navigation ul ul li:last-child {
 	border-bottom: 0;
 }
-.main-navigation li:hover > a {
-}
-.main-navigation ul ul :hover > a {
-}
-.main-navigation ul ul a:hover {
-}
 .main-navigation ul li:hover > ul {
 	left: 0;
-	box-shadow:0px 0px 7px #cecece;
 	background-color: var(--white-color);
 }
 .main-navigation ul ul li:hover > ul {
@@ -1323,7 +1317,7 @@ header {
 }
 
 .main-navigation ul ul li:hover {
-	background-color: #C59B6D;
+	background-color: var(--primary-color);
     color: var(--white-color) !important;
 }
 
@@ -1376,7 +1370,15 @@ color: var(--primary-color);
 @media screen and (max-width: 786px) {
 	
 	h1 {
-		font-size: 40px
+		font-size: 40px;
+	}
+	
+	h2 {
+		font-size: 30px;
+	}
+	
+	h3 {
+		font-size: 20px;
 	}
 	
 	#kantour .wrapper {
@@ -1396,6 +1398,11 @@ color: var(--primary-color);
 	
 	#footer {
 		text-align: center;
+	}
+	
+	.headercorner img {
+		width: 130px;
+		height: auto;
 	}
 		
 	.sub-menu

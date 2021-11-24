@@ -66,6 +66,13 @@
 	
 	<?php if(!is_page(5) && !is_single()) { ?>
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+		<?php 
+		if ( !is_page_template( 'single-excellence.php' ) ) {
+			?>
+			<div class="headercorner" style="position: absolute; right:0; bottom: 160px; z-index: 99;"><img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/Group-152.png"></div>
+		<?php	} else {
+			// do nothing
+		}?>
 		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: 100% 30%;">
 		<div class="header__overlay"></div>
 		<div class="container-xxl">
@@ -84,6 +91,15 @@
 
 	<?php if(is_single()) { ?>
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+		<?php 
+		if ( !is_page_template( 'single-excellence.php' ) ) {
+			?>
+			<div class="headercorner" style="position: absolute; right:0; bottom: 160px; z-index: 99;"><img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/Group-152.png"></div>
+		<?php	} else {
+			// do nothing
+		}?>
+		
+		
 		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: 100% 30%;">
 		<div class="header__overlay"></div>
 

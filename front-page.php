@@ -4,6 +4,7 @@
 get_header();
 ?>
 <?php is_front_page(); ?>
+<div class="headercorner" style="position: absolute; right:0; bottom: 120px; z-index: 99;"><img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/Group-152.png"></div>
 <div id="banner" style="position: relative;">
 <div class="overlay"></div>
 	<div class="container-xxl">
