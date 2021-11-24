@@ -253,11 +253,11 @@ header {
 
 #sec-people, #sec-sustainability, #sec-fit-for-future, #sec-data {
   display: block;
-  height: 100vh;
+  height: 600px;
 }
 
 .box-people, .box-sustainability, .box-fit-for-future, .box-data {
-	top: 200px;
+	top: 100px;
 }
 
 

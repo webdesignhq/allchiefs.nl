@@ -242,24 +242,25 @@ $(document).ready(function() {
 		})
 	});
 	
-	$(function() {
+/* Tetris effect */	
+$(function() {
 
-  var boxSustainability = new TimelineMax();
+	var boxSustainability = new TimelineMax();
    
 	boxSustainability.from('.box-sustainability',1,{
-// 		x: 150
+		x: 150
 	})  
   
-  var boxFitforfuture = new TimelineMax();
+	var boxFitforfuture = new TimelineMax();
    
 	boxFitforfuture.from('.box-fit-for-future',1,{
-// 		x: 150
+	x: 150
 	})  
 	
- var boxData = new TimelineMax();
+	var boxData = new TimelineMax();
    
 	boxData.from('.box-data',1,{
-// 		x: 150
+	x: 150
 	})  
   
 
@@ -267,7 +268,8 @@ $(document).ready(function() {
 
 	var pinPeopleBox = new ScrollMagic.Scene({
 				triggerElement: '#sec-people',
-				triggerHook: .1
+				triggerHook: .1,
+				duration: 1800, // the scene should last for a scroll distance of 100px
 			})
 			.setPin('.box-people')
 		
@@ -275,31 +277,35 @@ $(document).ready(function() {
 
 	var pinSustainabiltyBox = new ScrollMagic.Scene({
 				triggerElement: '#sec-sustainability',
-				triggerHook: .1
+				triggerHook: .1,
+				duration: 1200, // the scene should last for a scroll distance of 100px
 			})
 			.setPin('.box-sustainability')
 		
-		.setTween(boxSustainability)
+		//.setTween(boxSustainability)
 			.addTo(controller);
 
 
 	var pinFitForfutureBox = new ScrollMagic.Scene({
 				triggerElement: '#sec-fit-for-future',
-				triggerHook: .1
+				triggerHook: .1,
+				duration: 600, // the scene should last for a scroll distance of 100px
 			})
 			.setPin('.box-fit-for-future')
 		
-		.setTween(boxFitforfuture)
-			.addTo(controller);
+	//	.setTween(boxFitforfuture)
+		.addTo(controller);
 	
 	var pinData = new ScrollMagic.Scene({
 				triggerElement: '#sec-data',
-				triggerHook: .1
+				triggerHook: .1,
+				duration: .1, // the scene should last for a scroll distance of 100px
 			})
 			.setPin('.box-data')
 		
-		.setTween(boxData)
+		//.setTween(boxData)
 			.addTo(controller);
+	
 
 	});
 
