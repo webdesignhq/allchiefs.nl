@@ -65,7 +65,7 @@
 			</div>
 		</div>
 	</div>
-		<div class="container-xxl pt-5">
+		<div class="container-xxl">
 			<div class="row">
 				<div class="col-12 copyright">
 					<p>Copyright &copy; - <?php echo date('Y') ?> - Algemene voorwaarden - Privacyverklaring - Disclaimer</p>
@@ -79,6 +79,10 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/ScrollTrigger.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
 </body>
 

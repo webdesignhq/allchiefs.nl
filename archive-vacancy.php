@@ -52,16 +52,17 @@ $offers = runJob("71676");
         <div class="row">
 			<h2 class="py-3">Open to fill</h2>
 			<?php 
-				$i = 0;
-				// echo '<pre>';
+			
+				//echo '<pre>';
 				//var_dump($offers);
 				//echo '</pre>';
 				foreach ($offers as $offer) {
+					foreach($offer as $o) {
 					
-					$offerTitle = $offer[$i]->title; 
-					$offerDepartment = $offer[$i]->department; 
-					$offerDescription = $offer[$i]->description; 
-					$offerLink = $offer[$i]->slug; 
+					$offerTitle = $o->title; 
+					$offerDepartment = $o->department; 
+					$offerDescription = $o->description; 
+					$offerLink = $o->slug; 
 						?>
 
 					<div class="d-flex flex-column col-lg-3 col-md-12 vacature">
@@ -70,8 +71,8 @@ $offers = runJob("71676");
 						<p><?php echo $offerDescription; ?></p>
 						<a href="<?php echo $offerLink; ?>">Lees meer</a>
 					</div>
-					<?php $i++;                
-					sleep(0.1);
+					<?php
+					}
 				}   
 			?>
 		</div>
