@@ -29,17 +29,15 @@ get_header();
 							if ($category->category_parent > 0){
 								
 							}else{
-								if($category->slug == 'chiefs' && $category->slug == 'nieuws'  && $category->slug == 'blog' && $category->slug == 'opinieartikel'){
-									
-								} else{
-						?>
-							<li>
-								<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
-							 	<?php echo $category->name ?>
-								</a>
-						 	</li>
-							<?php
-						}}}
+								if($category->slug != 'chiefs' && $category->slug != 'nieuws'  && $category->slug != 'blog' && $category->slug != 'opinieartikel' && $category->slug != 'interview'){
+									?> 
+									<li>
+										<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
+										<?php echo $category->name ?>
+										</a>
+									</li>
+									<?php
+								}}}
 						?>
 				</ul>	
 					
@@ -51,17 +49,15 @@ get_header();
 							if ($category->category_parent > 0){
 								
 							}else{
-								if($category->slug == 'chiefs' && $category->slug == 'nieuws'  && $category->slug == 'blog' && $category->slug == 'opinieartikel'){
-									
-								} else{
-						?>
-							<li>
-								<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
-							 	<?php echo $category->name ?>
-								</a>
-						 	</li>
-							<?php
-						}}}
+								if($category->slug != 'chiefs' && $category->slug != 'data'  && $category->slug != 'fit-for-future' && $category->slug != 'people' && $category->slug != 'sustainability'){
+									?> 
+									<li>
+										<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
+										<?php echo $category->name ?>
+										</a>
+									</li>
+									<?php
+								}}}
 						?>
 					</ul>	
 				</div>
