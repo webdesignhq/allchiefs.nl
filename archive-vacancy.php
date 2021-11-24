@@ -2,6 +2,9 @@
 /* Template Name: Vacancy Archive */
 
 get_header();
+require_once('koppeling/api.php');
+$offers = runJob("71676"); 
+
 ?>
 <!-- <?php the_content();?> -->
 
@@ -50,6 +53,29 @@ get_header();
     <div class="container-xxl">
         <div class="row">
 			<h2>Binnenkort vacatures </h2>
+			<?php 
+				$i = 0;
+				// echo '<pre>';
+				//var_dump($offers);
+				//echo '</pre>';
+				foreach ($offers as $offer) {
+					
+					$offerTitle = $offer[$i]->title; 
+					$offerDepartment = $offer[$i]->department; 
+					$offerDescription = $offer[$i]->description; 
+					$offerLink = $offer[$i]->slug; 
+						?>
+
+					<div class="d-flex flex-column" style="background-color: #fff; padding: 20px;">
+						<span><?php echo $offerDepartment; ?></span>
+						<h3><?php echo $offerTitle; ?></h3>
+						<p><?php echo $offerDescription; ?></p>
+						<a href="<?php echo $offerLink; ?>">Lees meer</a>
+					</div>
+					<?php $i++;                
+					sleep(0.1);
+				}   
+			?>
 		</div>
 	</div>
 </div>

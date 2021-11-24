@@ -36,7 +36,7 @@
 
     function getOffers($companyid) {
 	
-        $json = requestAPI($companyid, "offers/", "json");
+       $json = requestAPI($companyid, "offers/?kind=job&scope=active", "json");
 			
         return $json;
     }
@@ -54,10 +54,17 @@
                     'post_status' => 'publish',
                 )
             );
-			echo 'Vacature aangemaakt met het id: ' .  $post_id;
+			//echo 'Vacature aangemaakt met het id: ' .  $post_id;
     
 		 }
     }
+	
+	function displayVacancy($vacancy) {
+
+        return $vacancy;
+    }
+	
+
 	
 	    /**
      * Runs the API job
@@ -66,18 +73,9 @@
     function runJob($companyid) {
 			
 		$offers = json_decode(getOffers($companyid));
+		displayVacancy($vacancy);
+		return $offers;
 		
-		$args = array( 'post_type' => 'vacature' ,'posts_per_page' => -1);
-		$vacancies = get_posts( $args );
-
-		$i = 0;
-		foreach ($offers as $offer) {
-			$productName = $offer[$i]->title;
-			createVacancy($productName);
-
-			$i++;                
-			sleep(0.1);
-		}   
     }
 
 	runJob("71676");

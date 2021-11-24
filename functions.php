@@ -273,7 +273,7 @@ function create_post_type_5() {
         'hierarchical' => false,
 		'taxonomies'  => array( 'category' ),
     );
-    register_post_type('vacature', $args);
+    register_post_type('vacancy', $args);
 }
 add_action('init', 'create_post_type_5');
 
