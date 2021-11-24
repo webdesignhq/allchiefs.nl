@@ -66,7 +66,7 @@
 	
 	<?php if(!is_page(5) && !is_single()) { ?>
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover;">
+		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: 100% 30%;">
 		<div class="header__overlay"></div>
 		<div class="container-xxl">
 			<div class="product__container col-12 d-lg-flex d-block flex-row">
@@ -84,7 +84,7 @@
 
 	<?php if(is_single()) { ?>
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover;">
+		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: 100% 30%;">
 		<div class="header__overlay"></div>
 
 		<div class="container-xxl" id="single__header">

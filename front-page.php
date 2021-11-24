@@ -5,6 +5,7 @@ get_header();
 ?>
 <?php is_front_page(); ?>
 <div id="banner" style="position: relative;">
+<div class="overlay"></div>
 	<div class="container-xxl">
 		<div class="row">
 			<div class="col-md-8">
@@ -17,7 +18,7 @@ get_header();
 	</div>
 	<div class="bannerblocks">
 		<div class="container-xxl">
-			<div class="row">
+			<div class="row bannerblocks-slider">
 				<div class="col-md-3 bannerblock">
 					<span>People</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
@@ -90,11 +91,11 @@ get_header();
 				<div id="sec-<?php echo $post->post_name; ?>" style="background-color:<?php echo get_field('bgcolor_excellence'); ?>;">
 					<div class="container-xxl">
 						<div class="row">
-<div class="col-md-3">
-							<div class="col-md-4 box-<?php echo $post->post_name; ?>">
-								<img src="<?php echo $icon; ?>" class="excellence__icon"/>
+							<div class="col-md-3">
+								<div class="col-md-4 box-<?php echo $post->post_name; ?>">
+									<img src="<?php echo $icon; ?>" class="excellence__icon"/>
+								</div>
 							</div>
-	</div>
 							<div class="col-md-7 offset-1">
 								<h4><?php echo $post->post_title; ?></h4> 
 								<p><?php echo get_field('excellence_description', $post->ID); ?></p>

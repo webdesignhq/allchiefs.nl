@@ -256,6 +256,10 @@ header {
   height: 100vh;
 }
 
+.box-people, .box-sustainability, .box-fit-for-future, .box-data {
+	top: 200px;
+}
+
 
 /* Banner Section */
 #banner {
@@ -265,6 +269,15 @@ header {
 	background-size: cover;
 	position: relative;
 	background-position: 100% 57%;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary-color);
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
 }
 
 #bannerindex {
@@ -1158,7 +1171,7 @@ header {
 	margin-top: 100px;
 	background: linear-gradient(90deg, var(--sand-40) 95%, var(--sand-40) 20%, var(--white-color) 5%);
 	position: relative;
-	padding: 100px 0;
+	padding: 100px 0 20px 0;
 }
 
 #footer ul li strong {
@@ -1175,8 +1188,7 @@ header {
 	content: url('http://localhost/allchiefs.nl/wp-content/themes/allchiefs.nl/img/allchiefs-corner-right.png');
 	position: absolute;
 	top: -70px;
-    right: 25px;
-	
+    right: 25px;	
 }
 
 #footer ul {
@@ -1185,6 +1197,10 @@ header {
 
 #footer ul li {
 	list-style: none;
+}
+
+.copyright p {
+	font-size: 14px;
 }
 
 
@@ -1358,6 +1374,11 @@ color: var(--primary-color);
 }
 
 @media screen and (max-width: 786px) {
+	
+	h1 {
+		font-size: 40px
+	}
+	
 	#kantour .wrapper {
 	  column-count: 2;
 	  column-gap: 10px;
@@ -1370,6 +1391,11 @@ color: var(--primary-color);
 	.extra__information {
 		left: unset;
 		width: 100%;
+	}
+	
+	
+	#footer {
+		text-align: center;
 	}
 		
 	.sub-menu

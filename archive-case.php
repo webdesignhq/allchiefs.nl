@@ -29,7 +29,7 @@ get_header();
 							if ($category->category_parent > 0){
 								
 							}else{
-								if($category->slug === 'chiefs'){
+								if($category->slug == 'chiefs' && $category->slug == 'nieuws'  && $category->slug == 'blog' && $category->slug == 'opinieartikel'){
 									
 								} else{
 						?>
@@ -46,22 +46,26 @@ get_header();
 				</div>
 				<div class="col-lg-5 col-12"> <span>Type</span> 
 					<ul class="cat-list">
-						<?php
-							$fieldkey = 'field_617fc258c002d';
-							$fields = get_field_object($fieldkey);
-							$types = $fields['choices'];
-								if ($fields) {
-									foreach ($types as $type) {?>
-										<li> 
-											<a class="cat-list_item filter-link" href="#!" data-content="<?php echo $type; ?>" data-type="case">
-											<?php echo $type; ?>
-											</a>	
-										</li>
-							<?php }
-						}?>
+						<?php 
+						foreach ($categories as $category) {
+							if ($category->category_parent > 0){
+								
+							}else{
+								if($category->slug == 'chiefs' && $category->slug == 'nieuws'  && $category->slug == 'blog' && $category->slug == 'opinieartikel'){
+									
+								} else{
+						?>
+							<li>
+								<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
+							 	<?php echo $category->name ?>
+								</a>
+						 	</li>
+							<?php
+						}}}
+						?>
 					</ul>	
 				</div>
-				<div class="col-3"> <span>Zoekding</span> </div>
+				<div class="col-3"> <span>Zoek cases</span> </div>
 			</div>	
 		</div>
 	</div>

@@ -43,10 +43,26 @@ get_header();
 				</div>
 				<div class="col-5"> <span>Type</span> 
 					<ul class="cat-list">
-					
-					</ul>	
+						<?php 
+						foreach ($categories as $category) {
+							if ($category->category_parent > 0){
+								
+							}else{
+								if($category->slug === 'chiefs'){
+									
+								} else{
+						?>
+							<li>
+								<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="">
+							 	<?php echo $category->name ?>
+								</a>
+						 	</li>
+							<?php
+						}}}
+						?>
+				</ul>		
 				</div>
-				<div class="col-3"> <span>Zoekding</span> </div>
+				<div class="col-3"> <span>Zoek insights</span> </div>
 			</div>	
 		</div>
 	</div>
