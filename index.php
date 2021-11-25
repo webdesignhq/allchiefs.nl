@@ -14,8 +14,7 @@ $singleoffer = getSingleOffer("71676", htmlspecialchars($_GET["id"]));
 					$offerLink = $singleoffer->slug; 
 						?>
 
-					<div class="d-flex flex-column col-lg-12 vacature">
-					<h4>test</h4>
+					<div class="d-flex flex-column col-lg-12">
 						<span><?php echo $offerDepartment; ?></span>
 						<h3><?php echo $offerTitle; ?></h3>
 						<?php echo $offerDescription; ?>

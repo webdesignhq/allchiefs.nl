@@ -355,14 +355,14 @@ function data_fetch() {
          'post_type' => array('post', 'case'),
       ) 
     );
-    if( $the_query->have_posts() ) :
+    if( $the_query->have_posts() ) {
         while( $the_query->have_posts() ): $the_query->the_post();
 
 			$myquery = esc_attr( $_POST['keyword'] );
 			$a = $myquery;
 			$search = get_the_title();
 			
-			if( stripos("/{$search}/", $a) !== false) {
+		
 				
 				global $post;
 				$title = $post->post_title;
@@ -377,10 +377,10 @@ function data_fetch() {
 				echo 	'<a class="d-none" href="'. get_permalink() .'"></a>';
 				echo '</div>';
 				echo '</div>';
-			}
+			
 		endwhile;
 		wp_reset_postdata();  
-	endif;
+	} 
 
 	die();
 }
