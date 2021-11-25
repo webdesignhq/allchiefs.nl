@@ -41,6 +41,7 @@ get_header();
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#data" class="read-more">Lees meer</a>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </div>
@@ -207,7 +208,7 @@ get_header();
 					<div class="insight clickable" style="height: 600px; background-image: url(''); background-size: cover;">
 						<p class="insight-image"><?php echo $backgroundImg[0]; ?></p>
 						<p class="insight-title"><?php echo get_the_title(); ?></p>
-						<p class="insight-exerpt"><?php echo get_the_content(); ?></p>
+						<p class="insight-exerpt"><?php echo get_the_excerpt(); ?></p>
 						<a class="d-none" href="<?php echo get_permalink();?>"> </a>
 					</div>
 					<!-- <div class="insight-content">

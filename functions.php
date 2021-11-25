@@ -341,3 +341,70 @@ function filter_projects() {
   }
   add_action('wp_ajax_filter_projects', 'filter_projects');
   add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
+  
+  
+ // the ajax function
+add_action('wp_ajax_data_fetch' , 'data_fetch');
+add_action('wp_ajax_nopriv_data_fetch','data_fetch');
+function data_fetch(){
+
+    $the_query = new WP_Query( 
+      array( 
+        'posts_per_page' => -1, 
+        's' => esc_attr( $_POST['keyword'] ), 
+         'post_type' => array('post', 'case'),
+      ) 
+    );
+
+
+    if( $the_query->have_posts() ) :
+        while( $the_query->have_posts() ): $the_query->the_post();
+
+$myquery = esc_attr( $_POST['keyword'] );
+$a = $myquery;
+$search = get_the_title();
+if( stripos("/{$search}/", $a) !== false) {
+	
+	global $post;
+		$title = $post->post_title;
+		$content = $post->post_content;
+		// $link = $post->the_permalink();
+
+		$backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+		echo '<div class="position-relative post-container mt-5">';
+		echo '<div class="post me-4 clickable">';
+		echo  	'<img class="post-image" src="'.$backgroundImg[0] .'?>" style="width: 100%; height: 200px; object-fit: cover;"></img>';
+		echo 	'<p class="post-title mt-4">'. $title .'</p>';
+		echo 	'<p class="post-exerpt">'. $content .'</p>';
+		echo 	'<a class="d-none" href="'. get_permalink() .'"></a>';
+		echo '</div>';
+		echo '</div>';
+                                  }
+    endwhile;
+        wp_reset_postdata();  
+    endif;
+
+    die();
+}
+
+// add the ajax fetch js
+add_action( 'wp_footer', 'ajax_fetch' );
+function ajax_fetch() {
+?>
+<script type="text/javascript">
+function fetch(){
+
+    jQuery.ajax({
+        url: '<?php echo admin_url('admin-ajax.php'); ?>',
+        type: 'post',
+        data: { action: 'data_fetch', keyword: jQuery('#keyword').val() },
+        success: function(data) {
+            jQuery('#response').html( data );
+        }
+    });
+
+}
+</script>
+
+<?php
+}

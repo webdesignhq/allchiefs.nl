@@ -61,7 +61,9 @@ get_header();
 						?>
 					</ul>	
 				</div>
-				<div class="col-3"> <span>Zoek cases</span> </div>
+				<div class="col-3"><br>
+					<input type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="Zoeken naar nieuwe cases" style="border: none; background-color: #FAF8F4; padding: 10px 20px;"></input>
+				</div>
 			</div>	
 		</div>
 	</div>
