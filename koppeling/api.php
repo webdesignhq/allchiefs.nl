@@ -36,47 +36,16 @@
 
     function getOffers($companyid) {
 	
-       $json = requestAPI($companyid, "offers/?kind=job&scope=active", "json");
-			
-        return $json;
+        $json = requestAPI($companyid, "offers/?kind=job&scope=active", "json");
+		$offers = json_decode($json);		
+        return $offers;
     }
 	
-    function createVacancy($vacancy) {
-
-        $creationStatus = true; 
-		
-		if($creationStatus) {
-           
-            $post_id = wp_insert_post(
-                array(
-                    'post_title' => strval($vacancy),
-                    'post_type' => 'vacature',
-                    'post_status' => 'publish',
-                )
-            );
-			//echo 'Vacature aangemaakt met het id: ' .  $post_id;
-    
-		 }
-    }
+	function getSingleOffer($companyid, $offerid) {
 	
-	function displayVacancy($vacancy) {
-
-        return $vacancy;
-    }
-	
-
-	
-	    /**
-     * Runs the API job
-     */
-    
-    function runJob($companyid) {
-			
-		$offers = json_decode(getOffers($companyid));
-		displayVacancy($vacancy);
-		return $offers;
-		
+        $json = requestAPI($companyid, "offers/". $offerid, "json");
+	    $singleoffer = json_decode($json);	
+        return $singleoffer->offer;
     }
 
-	runJob("71676");
 ?>

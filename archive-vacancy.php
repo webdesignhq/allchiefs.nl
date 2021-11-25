@@ -3,7 +3,7 @@
 
 get_header();
 require_once('koppeling/api.php');
-$offers = runJob("71676"); 
+$offers = getOffers("71676"); 
 
 ?>
 
@@ -50,17 +50,17 @@ $offers = runJob("71676");
 			<?php 
 				foreach ($offers as $offer) {
 					foreach($offer as $o) {
-					
+					//var_dump($o);
 					$offerTitle = $o->title; 
 					$offerDepartment = $o->department; 
 					$offerDescription = $o->description; 
-					$offerLink = $o->slug; 
+					$offerLink = $o->slug . "?id=" . $o->id; 
 						?>
 
 					<div class="d-flex flex-column col-lg-3 col-md-12 vacature">
 						<span><?php echo $offerDepartment; ?></span>
 						<h3><?php echo $offerTitle; ?></h3>
-						<!--<?php echo substr($offerDescription, 0, 200); ?> -->
+						<p><?php echo substr(strip_tags($offerDescription), 0, 200); ?></p>
 						<a href="<?php echo $offerLink; ?>">Lees meer</a>
 					</div>
 					<?php
