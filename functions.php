@@ -27,15 +27,13 @@ function website_setup()
 	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 	add_theme_support( 'custom-background' );
 	add_post_type_support( 'page', 'excerpt' );
-	
 
-	
 }
-endif; // website setup
+endif; 
 add_action( 'after_setup_theme', 'website_setup' );
 
 
-/* Adding breadcrubs */
+// Adding breadcrubs
 function the_breadcrumb() {
 	if (!is_home()) {
 		echo '<span class="breadcrumbs"><a href="';
@@ -57,7 +55,7 @@ function the_breadcrumb() {
 }
 
 
-/* Posibility to add a custom logo */
+// Posibility to add a custom logo
 function website_custom_logo_setup() {
     $defaults = array(
         'height'      => 50,
@@ -74,7 +72,7 @@ add_action( 'after_setup_theme', 'website_custom_logo_setup' );
 add_theme_support( 'post-thumbnails' ); 
 
 
-/* Create post type chiefs */
+// Create post type chiefs 
 function create_post_type() {
 	$supports = array(
         'title',
@@ -114,7 +112,7 @@ function create_post_type() {
 }
 add_action('init', 'create_post_type');
 
-/* Create post type solutions */
+// Create post type solutions
 function create_post_type_2() {
 	$supports = array(
         'title',
@@ -154,7 +152,8 @@ function create_post_type_2() {
 }
 add_action('init', 'create_post_type_2');
 
-/* Create post type cases */
+
+// Create post type cases 
 function create_post_type_3() {
 	$supports = array(
         'title',
@@ -195,7 +194,7 @@ function create_post_type_3() {
 add_action('init', 'create_post_type_3');
 
 
-/* Create post type core values */
+// Create post type core values 
 function create_post_type_4() {
 	$supports = array(
         'title',
@@ -237,7 +236,7 @@ add_action('init', 'create_post_type_4');
 
 
 
-/* Create post type core values */
+// Create post type Vacancies 
 function create_post_type_5() {
 	$supports = array(
         'title',
@@ -277,8 +276,8 @@ function create_post_type_5() {
 }
 add_action('init', 'create_post_type_5');
 
-/* Optionpage*/
 
+// Optionspages ACF 
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
@@ -302,6 +301,7 @@ if( function_exists('acf_add_options_page') ) {
 	));	
 }
 
+// Filter projects ajax function insights & cases
 function filter_projects() {
 	$catSlug = $_POST['category'];
   $typeSlug = $_POST['type'];
@@ -343,10 +343,10 @@ function filter_projects() {
   add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
   
   
- // the ajax function
+// Ajax search function insights & cases
 add_action('wp_ajax_data_fetch' , 'data_fetch');
 add_action('wp_ajax_nopriv_data_fetch','data_fetch');
-function data_fetch(){
+function data_fetch() {
 
     $the_query = new WP_Query( 
       array( 
@@ -355,56 +355,53 @@ function data_fetch(){
          'post_type' => array('post', 'case'),
       ) 
     );
-
-
     if( $the_query->have_posts() ) :
         while( $the_query->have_posts() ): $the_query->the_post();
 
-$myquery = esc_attr( $_POST['keyword'] );
-$a = $myquery;
-$search = get_the_title();
-if( stripos("/{$search}/", $a) !== false) {
-	
-	global $post;
-		$title = $post->post_title;
-		$content = $post->post_content;
-		// $link = $post->the_permalink();
+			$myquery = esc_attr( $_POST['keyword'] );
+			$a = $myquery;
+			$search = get_the_title();
+			
+			if( stripos("/{$search}/", $a) !== false) {
+				
+				global $post;
+				$title = $post->post_title;
+				$content = $post->post_content;
 
-		$backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-		echo '<div class="position-relative post-container mt-5">';
-		echo '<div class="post me-4 clickable">';
-		echo  	'<img class="post-image" src="'.$backgroundImg[0] .'?>" style="width: 100%; height: 200px; object-fit: cover;"></img>';
-		echo 	'<p class="post-title mt-4">'. $title .'</p>';
-		echo 	'<p class="post-exerpt">'. $content .'</p>';
-		echo 	'<a class="d-none" href="'. get_permalink() .'"></a>';
-		echo '</div>';
-		echo '</div>';
-                                  }
-    endwhile;
-        wp_reset_postdata();  
-    endif;
+				$backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+				echo '<div class="position-relative post-container mt-5">';
+				echo '<div class="post me-4 clickable">';
+				echo  	'<img class="post-image" src="'.$backgroundImg[0] .'?>" style="width: 100%; height: 200px; object-fit: cover;"></img>';
+				echo 	'<p class="post-title mt-4">'. $title .'</p>';
+				echo 	'<p class="post-exerpt">'. $content .'</p>';
+				echo 	'<a class="d-none" href="'. get_permalink() .'"></a>';
+				echo '</div>';
+				echo '</div>';
+			}
+		endwhile;
+		wp_reset_postdata();  
+	endif;
 
-    die();
+	die();
 }
 
 // add the ajax fetch js
 add_action( 'wp_footer', 'ajax_fetch' );
 function ajax_fetch() {
-?>
-<script type="text/javascript">
-function fetch(){
+	?>
+	<script type="text/javascript">
+	function fetch(){
 
-    jQuery.ajax({
-        url: '<?php echo admin_url('admin-ajax.php'); ?>',
-        type: 'post',
-        data: { action: 'data_fetch', keyword: jQuery('#keyword').val() },
-        success: function(data) {
-            jQuery('#response').html( data );
-        }
-    });
+		jQuery.ajax({
+			url: '<?php echo admin_url('admin-ajax.php'); ?>',
+			type: 'post',
+			data: { action: 'data_fetch', keyword: jQuery('#keyword').val() },
+			success: function(data) {
+				jQuery('#response').html( data );
+			}
+		});
 
-}
-</script>
-
-<?php
+	}
+	</script>
+	<?php
 }
