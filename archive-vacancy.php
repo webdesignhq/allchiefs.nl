@@ -6,21 +6,19 @@ require_once('koppeling/api.php');
 $offers = runJob("71676"); 
 
 ?>
-<!-- <?php the_content();?> -->
 
 <div style="position: absolute; right:0; margin-top: -200px;"><img src="<?php echo get_field('icon_excellence');?>"></div>
 <div id="intro-vacancies" class="pt-5 pb-5 mb-5">
 	<div class="container-xxl">
 		<div class="row align-items-center justify-content-between">
-		<div class="col-md-6 whatwedoimg">
+			<div class="col-md-6 whatwedoimg">
 				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_WORKSHOP_DSC_4435-scaled.jpg"/>
 			</div>
 			<div class="col-md-5">
 				<h2>Daag elkaar uit</h2>
-				<p><?php echo the_content(); ?></p>
+				<?php echo the_content(); ?>
 				<a href="#opentofill" class="btn btn-primary people-big">Onze vacatures</a>
 			</div>
-		
 		</div>
 	</div>
 </div>
@@ -30,32 +28,26 @@ $offers = runJob("71676");
         <div class="row">
             <h2 class="text-center py-3">Allchiefs geeft jou</h2>
 				<?php
-						$icons_row = get_field('icons', 'option');
-							if($icons_row)
+					$icons_row = get_field('icons', 'option');
+						if($icons_row)
+						{
+							foreach($icons_row as $row)
 							{
-								foreach($icons_row as $row)
-								{
-									$image = $row['icon'];
-									echo '<div class="col-lg-3 col-md-6 text-center extra"><img class="extra-img" src="'. $image .'"><p>' . $row['icon_text']  . '</p>';
-									echo '<div class="extra__information p-5"><h3>' . $row['icon_title']  . '</h3><p>' . $row['icon_description']  . '</p></div></div>';
-								}
+								$image = $row['icon'];
+								echo '<div class="col-lg-3 col-md-6 text-center extra"><img class="extra-img" src="'. $image .'"><p>' . $row['icon_text']  . '</p>';
+								echo '<div class="extra__information p-5"><h3>' . $row['icon_title']  . '</h3>' . $row['icon_description']  . '</div></div>';
 							}
-					?>
+						}
+				?>
         </div> 
-		
     </div> 
 </div>
-
 
 <div id="opentofill" style="background: var(--sand-25);">
     <div class="container-xxl">
         <div class="row">
 			<h2 class="py-3">Open to fill</h2>
 			<?php 
-			
-				//echo '<pre>';
-				//var_dump($offers);
-				//echo '</pre>';
 				foreach ($offers as $offer) {
 					foreach($offer as $o) {
 					
@@ -68,7 +60,7 @@ $offers = runJob("71676");
 					<div class="d-flex flex-column col-lg-3 col-md-12 vacature">
 						<span><?php echo $offerDepartment; ?></span>
 						<h3><?php echo $offerTitle; ?></h3>
-						<p><?php echo $offerDescription; ?></p>
+						<!--<?php echo substr($offerDescription, 0, 200); ?> -->
 						<a href="<?php echo $offerLink; ?>">Lees meer</a>
 					</div>
 					<?php
@@ -98,7 +90,7 @@ $offers = runJob("71676");
 								{
 									echo '<div class="d-flex flex-row">';
 									$image = $row['image'];
-									echo '<div class="col-lg-4 col-sm-12 p-4"><h3>' . $row['name']  . '</h3><p>' . $row['description']  . '</p><a class="btn btn-primary" href="">Lees het verhaal van ' . $row['name']  . '</a></div>';
+									echo '<div class="col-lg-4 col-sm-12 p-4"><h3>' . $row['name']  . '</h3>' . $row['description']  . '<a class="btn btn-primary" href="">Lees het verhaal van ' . $row['name']  . '</a></div>';
 									echo '<div class="col-lg-7 offset-lg-1 col-sm-12 offset-sm-0"><img style="height: 70%; width: 100%; object-fit: cover;" data-lazy="'. $image .'"></div>';
 									echo '</div>';
 								}
@@ -116,7 +108,6 @@ $offers = runJob("71676");
 			<h2 class="py-3">Kantour</h2>
 			<div class="wrapper">
 				<?php
-		
 						$kantour_row = get_field('kantour', 'option');
 							if($kantour_row)
 							{
@@ -134,8 +125,4 @@ $offers = runJob("71676");
 	</div>
 </div>
 
-
-<?php
-get_footer();
-
-?>
+<?php get_footer(); ?>

@@ -20,22 +20,22 @@ get_header();
 	<div class="bannerblocks">
 		<div class="container-xxl">
 			<div class="row bannerblocks-slider">
-				<div class="col-md-3 bannerblock">
+				<div class="bannerblock">
 					<span>People</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#people" class="read-more">Lees meer</a>
 				</div>
-				<div class="col-md-3 bannerblock">
+				<div class="bannerblock">
 					<span>Sustainability</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#sustainability" class="read-more">Lees meer</a>
 				</div>
-				<div class="col-md-3 bannerblock">
+				<div class="bannerblock">
 					<span>Fit for Future</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#fitforfuture" class="read-more">Lees meer</a>
 				</div>
-				<div class="col-md-3 bannerblock">
+				<div class="bannerblock">
 					<span>Data</span>
 					<p>Alles wat hier staat is slechts om <br> een indruk te geven</p>
 					<a href="<?php echo get_template_directory_uri(); ?>/wat-we-doen/#data" class="read-more">Lees meer</a>

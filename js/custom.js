@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function ($) {
 
 	$(".clickable").click(function(e) {
 		e.preventDefault();
@@ -93,26 +93,28 @@ $(document).ready(function() {
 		// instead of a settings object
 	  ]
 	});
+
 	
-	$('.bannerblocks-slider').slick({
-	  dots: false,
-	  infinite: false,
-	  autoPlay: false,
-	  slidesToShow: 4,
-	  slidesToScroll: 1,
-	  arrows: false,
-	  responsive: [
-		{
-		  breakpoint: 768,
-		  settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			mobileFirst: true,
-		  }
-		}
-	  ]
-	});
-	
+		$('.bannerblocks-slider').slick({
+		  dots: false,
+		  infinite: false,
+		  autoPlay: false,
+		  slidesToShow: 4,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  mobileFirst: true,
+		  responsive: [
+			{
+			  breakpoint: 767,
+			  settings:  {
+				 slidesToShow: 1,
+				 slidesToScroll: 1,
+			  }
+			}
+
+		  ]
+		
+		});
 
 	$('.case__slider').slick({
 		centerMode: false,

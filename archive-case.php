@@ -4,8 +4,7 @@
 get_header();
 ?>
 <!-- <?php the_content();?> -->
-<div id="cases" class="pt-5" style="background: linear-gradient(
-		270deg, var(--white-color) 30%, var(--sand-25) 20%, var(--sand-25) 50%);">
+<div id="cases" class="pt-5" style="background: linear-gradient(270deg, var(--white-color) 30%, var(--sand-25) 20%, var(--sand-25) 50%);">
 	<div id="filters">
 		<div class="container-xxl">
 			<div class="row">
@@ -23,26 +22,26 @@ get_header();
 						'pad_counts'               => false );
 						$categories = get_categories($args);
 					?>
-				<ul class="cat-list">
-						<?php 
-						foreach ($categories as $category) {
-							if ($category->category_parent > 0){
-								
-							}else{
-								if($category->slug != 'chiefs' && $category->slug != 'nieuws'  && $category->slug != 'blog' && $category->slug != 'opinieartikel' && $category->slug != 'interview'){
-									?> 
-									<li>
-										<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
-										<?php echo $category->name ?>
-										</a>
-									</li>
-									<?php
-								}}}
-						?>
-				</ul>	
-					
+					<ul class="cat-list">
+							<?php 
+							foreach ($categories as $category) {
+								if ($category->category_parent > 0){
+									
+								}else{
+									if($category->slug != 'chiefs' && $category->slug != 'nieuws'  && $category->slug != 'blog' && $category->slug != 'opinieartikel' && $category->slug != 'interview'){
+										?> 
+										<li>
+											<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
+											<?php echo $category->name ?>
+											</a>
+										</li>
+										<?php
+									}}}
+							?>
+					</ul>	
 				</div>
-				<div class="col-lg-5 col-12"> <span>Type</span> 
+				<div class="col-lg-5 col-12"> 
+					<span>Type</span> 
 					<ul class="cat-list">
 						<?php 
 						foreach ($categories as $category) {
@@ -67,12 +66,10 @@ get_header();
 			</div>	
 		</div>
 	</div>
-
 	<div id="cases">
 		<div class="container-xxl">
 			<div class="row flex-wrap justify-content-start" id="response">
-			<?php if (have_posts()) : ?>     
-		<?php  
+				<?php if (have_posts()) : 
 					$args = array(
 						'post_type'      => 'case',
 						'posts_per_page' => 8,
@@ -80,10 +77,10 @@ get_header();
 
 					$loop = new WP_Query( $args );
 
-					while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<?php global $post; 
-					?>
-					<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+					while ( $loop->have_posts() ) : $loop->the_post();
+					global $post; 
+					$backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+					
 					<div class="position-relative post-container my-lg-5 my-2">
 						<div class="post clickable me-lg-4">
 							<img class="post-image" src="<?php echo $backgroundImg[0]; ?>" style="width: 100%; height: 200px; object-fit: cover;" />
@@ -94,12 +91,9 @@ get_header();
 					</div> 
 					<?php endwhile; ?>
 
-					<?php else: ?>
-						<p>Sorry, er zijn geen producten gevonden</p>
-					<?php endif 
-
-					// wp_reset_query();
-				?>
+				<?php else: ?>
+					<p>Sorry, er zijn geen producten gevonden</p>
+				<?php endif ?>
 			</div>
 		</div>
 	</div>
