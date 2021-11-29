@@ -99,16 +99,16 @@ jQuery(document).ready(function ($) {
 		  dots: false,
 		  infinite: false,
 		  autoPlay: false,
+		  mobileFirst: false,
 		  slidesToShow: 4,
 		  slidesToScroll: 1,
 		  arrows: false,
-		  mobileFirst: true,
 		  responsive: [
 			{
-			  breakpoint: 767,
-			  settings:  {
-				 slidesToShow: 1,
-				 slidesToScroll: 1,
+			  breakpoint: 800,
+			  settings: {
+				slidesToShow: 1,
+		  		slidesToScroll: 1,
 			  }
 			}
 

@@ -7,7 +7,9 @@
  * @since Twenty Fifteen 1.0
  */
   
-get_header(); ?>
+get_header();
+global $post;
+?>
 <div id="insights">
     <div class="container-lg">
         <div class="row">
@@ -18,6 +20,13 @@ get_header(); ?>
         <div class="row" id="insight__quote">
             <div class="container-lg">
                 <p>Clients & Expertisegebieden</p>
+                <?php $categories = get_the_category($post->ID) ;
+                        foreach ($categories as $category){
+                            if($category->parent < 1 && $category->slug != 'chiefs'){
+                                ?> <span class="expertise" style="background-color: var( <?php if($category->slug === 'people'){  ?> --people-color <?php } else if($category->slug === 'sustainability'){  ?> --sustainability-color <?php } else if($category->slug === 'data'){  ?> --data-color <?php } else if($category->slug === 'fit-for-future'){  ?> --fitforfuture-color <?php } ?> );"> <?php echo $category->name; ?> </span> <?php
+                            }
+                        }
+                ?>
             </div>
         </div>
 

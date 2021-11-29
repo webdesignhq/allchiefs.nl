@@ -326,6 +326,8 @@ header {
 	bottom: 0;
 	background-color: rgba(0,0,0,0.5);
 	padding: 100px 0;
+	flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 #banner .bannerblocks span {
@@ -344,6 +346,7 @@ header {
 	border-right: solid 1px var(--white-color);
 	padding: 25px;
 	padding-left: 50px;
+	width: 25%;
 }
 
 #banner .bannerblocks .bannerblock:last-child{
@@ -538,7 +541,22 @@ header {
 /* Who we are page */
 #whoweare .whoweareimg{
 	max-height: 700px;
+	position: relative;
+	z-index: 1;
+	margin-top: 200px;
 }
+
+#whoweare .whoweareimg:before{
+	content: '';
+	position: absolute;
+	background-color: var(--primary-color);
+	bottom: 0;
+	left: -50px;
+	width: 100px;
+	height: 350px;
+	z-index: -200;
+}
+
 #whoweare .whoweareimg img {
 	width: 100%;
 	max-height: 700px!important;
@@ -668,6 +686,12 @@ header {
 	background-size: cover!important;
 	background-position: center!important;
 	transition: all .4s ease-out;
+}
+
+#insights .expertise{
+	padding: 10px 15px;
+	color: var(--white-color);
+	margin: 0 10px;
 }
 
 .insight{
@@ -1400,8 +1424,24 @@ color: var(--primary-color);
 		text-align: center;
 	}
 	
+	#banner .bannercontent {
+		top: 20%;
+	}
+	
+	#banner .bannerblocks {
+		padding: 50px 0;
+	}
+	
+	#banner .bannerblocks .bannerblock {
+		border-right: unset;
+	}
+	
+	.headercorner {
+		bottom: 20px !important;
+	}
+	
 	.headercorner img {
-		width: 130px;
+		width: 100px;
 		height: auto;
 	}
 		

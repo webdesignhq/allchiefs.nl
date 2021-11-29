@@ -54,6 +54,7 @@ get_header();
 			<div class="col-lg-5">
 				<h2>Sta vandaag klaar voor de dag van morgen</h2>
 				<p class="mt-4">Wij zetten jou aan het stuur van je eigen verandering. Door verbinding maken we impact. Onze Chiefs excelleren op people, customers, performance en ecosystems en vooral waar deze samen komen. Wij zijn scherp en blikverruimend. Voor ons telt alleen het optimale resultaat.</p>
+				<a href="<?php echo get_site_url()?>/wat-we-doen" class="btn btn-primary text-uppercase" style="background-color:rgb(215,31,30);">Wat we doen</a>
 			</div>
 		</div>
 	</div>
@@ -101,7 +102,7 @@ get_header();
 							<div class="col-md-7 offset-1">
 								<h4><?php echo $post->post_title; ?></h4> 
 								<p><?php echo get_field('excellence_description', $post->ID); ?></p>
-								<a href="<?php echo get_permalink($post->ID); ?>" class="btn btn-primary" style="background-color:<?php echo get_field('color_excellence', $post->ID); ?>;"><?php echo $post->post_title; ?></a>
+								<a href="<?php echo get_permalink($post->ID); ?>" class="btn btn-primary text-uppercase" style="background-color:<?php echo get_field('color_excellence', $post->ID); ?>;"><?php echo $post->post_title; ?></a>
 							</div>
 						</div>
 					</div>
@@ -180,6 +181,7 @@ get_header();
 			<div class="col-lg-5">
 				<h2>Wie we zijn</h2>
 				<p>AllChiefs weet als geen ander dat mensen de sleutel zijn tot succes voor iedere organisatie en uiteindelijk een betere wereld. We brengen mensen samen, dagen uit, ondersteunen en versnellen. Samen bouwen we aan duurzame organisaties die toekomstbestendig zijn. Impact maken met de juiste balans tussen mens, planeet en resultaat.</p>
+				<a href="<?php echo get_site_url()?>/wat-we-doen" class="btn btn-primary text-uppercase" style="background-color:rgb(215,31,30);">Wat we doen</a>
 			</div>
 			<div class="col-lg-6 whoweareimg">
 				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/10/ALLCHIEFS_WORKSHOP_DSC_4026.jpg"/>

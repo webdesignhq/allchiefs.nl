@@ -26,9 +26,25 @@ $offers = runJob("71676");
 						<h3><?php echo $offerTitle; ?></h3>
 						<p><?php echo $offerDescription; ?></p>
 					</div>
-					<?php
-				}   
-			?>
+        </div>
+        <div class="row">
+          <div class="d-flex flex-column">
+            <form name="applyForm" method="post" onsubmit="sendApplication(this)">
+              <label for="name">Volledige naam</label>
+              <input type="name" name="name" id="name"/>
+              <label for="email">E-mailadres</label>
+              <input type="email" name="email" id="email"/>
+              <label for="phone">Telefoonnummer</label>
+              <input type="tel" name="phone" id="phone"/>
+              <label for="file">CV</label>
+              <input type="file" name="cv" id="cv"/>
+              <label for="picture">Foto</label>
+              <input type="file" name="picture" id="picture"/>
+              <input type="submit">Versturen</input>
+              
+              <!-- misschien hier nog motivatiebrief bij -->
+            </form>
+          </div>
         </div>
     </div>
 
