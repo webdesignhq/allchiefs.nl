@@ -66,7 +66,7 @@
 			</div>		
 	</header>
 	
-	<?php if(!is_page(5) && !is_single()) { ?>
+	<?php if(!is_page_template( 'front-page.php' )  && !is_single()) { ?>
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 		<?php 
 		if ( !is_page_template( 'single-excellence.php' ) ) {

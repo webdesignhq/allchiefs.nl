@@ -24,7 +24,7 @@ $singleoffer = getSingleOffer("71676", htmlspecialchars($_GET["id"]));
         </div>
                 <div class="row">
           <div class="d-flex flex-column">
-            <form name="applyForm" id="applyForm" method="post">
+            <form name="applyForm" id="applyForm" method="post" action="sendApplication()">
               <label for="name">Volledige naam</label>
               <input type="name" name="name" id="name"/>
               <label for="email">E-mailadres</label>

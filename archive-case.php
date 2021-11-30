@@ -28,7 +28,7 @@ get_header();
 								if ($category->category_parent > 0){
 									
 								}else{
-									if($category->slug != 'chiefs' && $category->slug != 'nieuws'  && $category->slug != 'blog' && $category->slug != 'opinieartikel' && $category->slug != 'interview'){
+									if($category->slug != 'chiefs' && $category->slug != 'nieuws'  && $category->slug != 'blog' && $category->slug != 'opinieartikel' && $category->slug != 'interview' && $category->slug != 'geen-onderdeel-van-een-categorie'){
 										?> 
 										<li>
 											<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">
@@ -48,7 +48,7 @@ get_header();
 							if ($category->category_parent > 0){
 								
 							}else{
-								if($category->slug != 'chiefs' && $category->slug != 'data'  && $category->slug != 'fit-for-future' && $category->slug != 'people' && $category->slug != 'sustainability'){
+								if($category->slug != 'chiefs' && $category->slug != 'data'  && $category->slug != 'fit-for-future' && $category->slug != 'people' && $category->slug != 'sustainability' && $category->slug != 'geen-onderdeel-van-een-categorie'){
 									?> 
 									<li>
 										<a class="cat-list_item" href="#!" data-slug="<?php echo $category->slug ?>" data-type="case">

@@ -10,11 +10,6 @@
     function requestAPI($companyid, $api_route, $method) {
 		
         $curl = curl_init();
-
-        //$configString = file_get_contents("../static/config.json");
-        //$config = json_decode($configString, true);
-
-        // $api_key = $config['api_key'];
 	 	$api_key = "Bearer eFFmc1ZJTzRVM2l1bnkyZFRncklpQT09";
     
         $requestUrl = "https://allchiefs.recruitee.com/api/" . $api_route;
@@ -26,7 +21,6 @@
 			'Accept: application/'. $method,
         ));
         
-
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
        
         $results = curl_exec($curl);
@@ -36,6 +30,7 @@
         if(!$results) { echo 'No results!'; }
         return $results;
     }
+
 
     function getOffers($companyid) {
 	
@@ -71,49 +66,55 @@
       // echo json_encode($postData);
       
     $offer = getSingleOffer('71676', $offer_id);
-    // $curl = curl_init("https://allchiefs.recruitee.com/api/offers/" . $offer->slug . "/candidates");
-    // echo $offer->slug;
-    // $requestUrl = "https://allchiefs.recruitee.com/api/offers/" . $offer->slug . "/candidates";
-    // echo $requestUrl;
-    // curl_setopt($curl, CURLOPT_URL, $requestUrl);
-    // curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($postData));
-    // curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    // curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-    //   'Authorization: '. $api_key,
-    //   'Accept: application/json',
-    // ));
+    $curl = curl_init("https://allchiefs.recruitee.com/api/offers/" . $offer->slug . "/candidates");
+	//	echo $offer->slug;
+    $requestUrl = "https://allchiefs.recruitee.com/api/offers/" . $offer->slug . "/candidates";
+		// echo $requestUrl;
+    
+	curl_setopt($curl, CURLOPT_URL, $requestUrl);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($postData));
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+      'Authorization: '. $api_key,
+      'Accept: application/json',
+	  'Content-Type: application/json',
+    ));
+	
+	curl_setopt($curl, CURLOPT_POST, true);
 
 
-    $curlHandler = curl_init();
+    // $curlHandler = curl_init();
 
-    curl_setopt_array($curlHandler, [
-      CURLOPT_URL => 'https://allchiefs.recruitee.com/api/offers/' . $offer->slug . '/candidates',
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_HTTPHEADER => array (
-        'Authorization: Bearer eFFmc1ZJTzRVM2l1bnkyZFRncklpQT09',
-        'Accept: application/json',
-        'Content-Type: application/json',
-      ),
-      /**
-       * Specify POST method
-       */
-      CURLOPT_POST => true,
+    // curl_setopt_array($curlHandler, [
+      // CURLOPT_URL => 'https://allchiefs.recruitee.com/api/offers/' . $offer->slug . '/candidates',
+      // CURLOPT_RETURNTRANSFER => true,
+      // CURLOPT_HTTPHEADER => array (
+        // 'Authorization: Bearer eFFmc1ZJTzRVM2l1bnkyZFRncklpQT09',
+        // 'Accept: application/json',
+        // 'Content-Type: application/json',
+      // ),
+      // /**
+       // * Specify POST method
+       // */
+      // CURLOPT_POST => true,
 
-      /**
-       * Specify request content
-       */
-      CURLOPT_POSTFIELDS => $postData,
-    ]);
+      // /**
+       // * Specify request content
+       // */
+      // CURLOPT_POSTFIELDS => $postData,
+    // ]);
 
-    $response = curl_exec($curlHandler);
+    $response = curl_exec($curl);
 
     if($response === false) {
     }
-    echo($response);
-    var_dump(curl_getinfo($curlHandler));
+	echo '<pre>';
+	echo($response);
+	echo '</pre>';
+   //var_dump(curl_getinfo($curl));
     // $results = curl_exec($curl);
     
-    curl_close($curlHandler);
+    curl_close($curl);
     
     // if(!results) { echo 'No results!';}
     // echo $results;

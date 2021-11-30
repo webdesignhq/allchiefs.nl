@@ -649,6 +649,10 @@ header {
 	width: 100%;
 }
 
+.tab-pane .chief{
+	height: auto!important;
+}
+
 /* Excellences single */
 
 #intro-excellence img {
@@ -675,6 +679,18 @@ header {
 	background-color: var(--people-color) !important;
 	color: var(--white-color) !important;
 	border-radius: 0;
+}
+
+#sustainability .nav-link.active {
+	background-color: var(--sustainability-color) !important;
+}
+
+#fitforfuture .nav-link.active {
+	background-color: var(--fitforfuture-color) !important;
+}
+
+#data .nav-link.active {
+	background-color: var(--data-color) !important;
 }
 
 .nav-link {

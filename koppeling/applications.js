@@ -1,8 +1,8 @@
-jQuery(document).ready(function($) {
-  $('#applyForm').submit(function(e) {
-    e.preventDefault();
-    sendApplication(this);
-  });
+/* jQuery(document).ready(function($) {
+  // $('#applyForm').submit(function(e) {
+    // e.preventDefault();
+    // sendApplication(this);
+  // });
   function sendApplication(form) {
     // get form data from form 
     const formData = $(form).serializeArray();
@@ -21,4 +21,4 @@ jQuery(document).ready(function($) {
     });
     // return some visual indicator that the application has been sent (or has failed)
   }
-});
+}); */
