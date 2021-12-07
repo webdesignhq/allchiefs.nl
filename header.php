@@ -42,7 +42,6 @@
 					</div> 
 				</div>
 				<div class="col-lg-10 col-6 text-right pe-5" id="menu">
-					<!-- <button class="menu-toggle btn"><i class="fas fa-bars"></i></button> -->
 					<div id="nav-icon1" class="menu-toggle-btn">
 						<span></span>
 						<span></span>
@@ -74,15 +73,23 @@
 			<div class="headercorner" style="position: absolute; right:0; bottom: 160px; z-index: 99;"><img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/Group-152.png"></div>
 		<?php	} else {
 			// do nothing
-		}?>
+		}?> 
 		<div id="bannerindex" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: 100% 30%;">
 		<div class="header__overlay"></div>
 		<div class="container-xxl">
 			<div class="product__container col-12 d-lg-flex d-block flex-row">
 				<div class="d-flex flex-column">
 					<div class="bannerindexcontent text-left p-4">
+						<?php if(is_archive()) { ?>
+						<h1 class="mb-3">Cases</h1>
+						<?php } else { ?>
 						<h1 class="mb-3"><?php echo get_the_title(); ?></h1>
-						<span><?php echo the_excerpt(); ?></span>
+						<?php }; ?>
+						<?php if(is_archive()) { ?>
+							<span>Lees hier meer over alle cases</span>
+						<?php } else { ?>
+							<span><?php echo the_excerpt(); ?></span>
+						<?php }; ?>
 						<p><?php the_breadcrumb(); ?></p>
 					</div>
 				</div>
@@ -91,7 +98,7 @@
 	</div>
 	<?php } ?>
 
-	<?php if(is_single()) { ?>
+	<?php if(is_single() && !is_page(14)) { ?>
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 		<?php 
 		if ( !is_page_template( 'single-excellence.php' ) ) {
@@ -137,6 +144,7 @@
 					<div class="bannerindexcontent text-left">
 						<div class="container-lg">
 							<h1 class="mb-3"><?php echo get_the_title(); ?></h1>
+							<span><?php echo the_excerpt(); ?></span>
 							<p><?php the_breadcrumb(); ?></p>
 						</div>
 					</div>
@@ -145,6 +153,7 @@
 		</div>
 	</div>
 	<?php } ?>
+
 
 
 

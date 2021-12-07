@@ -10,7 +10,7 @@ get_header(); ?>
 
             </div>
             <div class="offset-lg-1 col-lg-6 col-12" >
-                <img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_WORKSHOP_DSC_4026-scaled.jpg" alt="" class="h-100" style="width: 100%; object-fit: cover;">
+                <img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/12/8457-scaled.jpg" alt="" class="h-100" style="width: 100%; object-fit: cover;">
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@ get_header(); ?>
 		        <?php  
 					$args = array(
 						'post_type'      => 'chief',
-						'posts_per_page' => 15,
+						'posts_per_page' => -1,
 					);
 
 					$loop = new WP_Query( $args );

@@ -56,6 +56,7 @@ p {
     line-height: 40px;
     color: var(--secondary-color);
 	line-height: 1.73;
+	font-weight: 300;
   	font-family: var(--primary-font);
 }
 
@@ -316,7 +317,7 @@ header {
 	color: var(--white-color);
 }
 
-#banner span {
+#banner span, #banner p {
 	color: var(--white-color);
 }
 
@@ -470,7 +471,7 @@ header {
    }
 
 .slider-nav .slick-slide{
-	padding: 70px;
+	padding: 40px 70px 40px 40px;
 	background-color: #F9F9F9;
 	z-index: 10;
 	transition: all .2s ease-in;
@@ -494,22 +495,31 @@ header {
 	opacity: 1;
 }
 
-.slider-nav .slick-current::before, .slider-nav .slick-current::after{
+.slider-nav .slick-current::before{
 	content: '';
 	position: absolute;
 	width: 50px;
 	height: 50px;
-	background-color: var(--data-color);
+	background: url('https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/12/allchiefs-corner-left-bottom.png');
 }
 
+ .slider-nav .slick-current::after {
+	 content: '';
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: url('https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/12/allchiefs-corner-right.png');
+}
+
+
 .slider-nav .slick-current::before{
-	top: 94%;
+	top: 92.5%;
 	left: -2%;
 }
 
 .slider-nav .slick-current::after{
 	top: -5%;
-	right: -2%;
+    right: -2.3%;
 }
 
 /* .slider-nav .slick-current h3, .slider-nav .slick-current p { 
@@ -528,14 +538,18 @@ header {
 
 .slick-current .slidertext {
 	color: #fff !important;
+	font-size: 14px;
 }
 
 .slick-current .slidertitle {
 	color: #fff !important;
+	font-size: 19px;
+	font-weight: bold;
 }
 
 .slick-current .sliderlink {
 	color: #fff !important;
+	font-size: 14px;
 }
 
 /* Who we are page */
@@ -613,13 +627,15 @@ header {
 	position: relative;
 }
 
-#locations .contactblock:after {
-	content: url('https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/allchiefs-corner-left.png');
-    position: absolute;
-    top: -10px;
-    left: -10px;
-	width: 30px;
-	height: 30px;
+#locations .contactblock:before {
+	background: url('https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/allchiefs-corner-left.png');
+	content: '';
+	position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 0;
+    top: 0;
+	background-size: cover;
 }
 
 #contact .social-link {
@@ -663,6 +679,26 @@ header {
 	padding: 100px 0;
 }
 
+#excellence-cases {
+	padding: 100px 0;
+}
+
+#excellence-solutions .content span, #excellence-cases .content span { 
+	font-size: 23px;
+	font-weight: bold;
+}
+
+#excellence-solutions .content p, #excellence-cases .content p { 
+	font-size: 18px;
+	padding-top: 20px;
+}
+
+#excellence-solutions .content a, #excellence-cases .content a { 
+	font-size: 18px;
+	padding-top: 20px;
+	font-weight: bold;
+	color: var(--secondary-color);
+}
 
 #sustainability img, #peope img, #fitforfuture img, #data img {
     width: 100%;
@@ -796,6 +832,14 @@ header {
 	display: block;
 	padding: 0;
 	margin-top: 15px;
+}
+
+#filters .cat-list .cat-list_item:hover {
+    background-color: var(--primary-color);
+}
+
+#filters .cat-list li:hover a {
+    color: var(--white-color);
 }
 
 #filters .cat-list li{

@@ -12,7 +12,7 @@ $offers = getOffers("71676");
 	<div class="container-xxl">
 		<div class="row align-items-center justify-content-between">
 			<div class="col-md-6 whatwedoimg">
-				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/11/ALLCHIEFS_WORKSHOP_DSC_4435-scaled.jpg"/>
+				<img src="https://server1.webdesignhq.cloud.shockmedia.nl/~allchiefs/wp-content/uploads/2021/12/0822-scaled.jpg"/>
 			</div>
 			<div class="col-md-5">
 				<h2>Daag elkaar uit</h2>
